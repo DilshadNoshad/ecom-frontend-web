@@ -1,0 +1,35 @@
+.thank_u-msg-wrap {
+  text-align: center;
+  background-color: var(--clr-light);
+  margin-top: 12px;
+  padding: 4rem 2rem;
+}
+.thank_u-msg-wrap [data_checkmark="checkmark-circle"] {
+  width: 100px;
+  height: 100px;
+}
+
+.thank_u-msg-description {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: column nowrap;
+}
+.thank_u-msg-wrap .thank_u-msg_title {
+  color: var(--clr-green);
+  font-size: 32px;
+  color: var(--clr-green);
+  font-size: 32px;
+}
+.thank_u-msg-wrap .thank_u-msg_subtotal {
+  margin-top: 12px;
+  font-size: var(--normal-med-font);
+}
+.thank_u-msg-wrap .thank_u-msg_subtotal span {
+  font-size: 26px;
+  font-weight: 600;
+}
+.thank_u-msg-wrap .thank_u-msg_order_num {
+  font-size: var(--normal-med-font);
+  margin-top: 12px;
+}

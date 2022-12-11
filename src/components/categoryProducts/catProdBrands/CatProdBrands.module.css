@@ -1,0 +1,22 @@
+.categories_brand {
+  display: flex;
+  flex-flow: row wrap;
+  margin: 10px 0 0;
+  border: 1px solid var(--clr-gray-light-b);
+  border-radius: 3px;
+  box-shadow: 0 2px 4px rgb(0 0 0 / 5%);
+}
+.categories_brand > a {
+  flex: 1 1 auto;
+  text-decoration: none;
+}
+
+.categories_brand a {
+  background-color: var(--clr-light);
+  padding: 8px 0;
+  display: block;
+  text-decoration: none;
+}
+.categories_brand a:not(:last-child) {
+  border-right: 1px solid var(--clr-gray-light-b);
+}

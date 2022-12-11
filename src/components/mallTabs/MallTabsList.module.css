@@ -1,0 +1,14 @@
+.tab_main {
+  display: flex;
+  justify-content: space-between;
+  flex-flow: row wrap;
+  margin-top: 12px;
+  padding: 0;
+  list-style-type: none;
+}
+
+@media (min-width: 550px) {
+  .tab_main {
+    justify-content: flex-start;
+  }
+}

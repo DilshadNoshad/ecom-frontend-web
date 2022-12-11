@@ -1,0 +1,17 @@
+.rating_summary {
+  flex-basis: 30%;
+}
+.rating_summary .score-max {
+  font-size: var(--normal-xl-font);
+  color: var(--clr-gray-light);
+  /* text-align: center; */
+  line-height: 40px;
+}
+.rating_summary .score-average {
+  font-size: 48px;
+}
+
+.rating_summary .average,
+.rating_summary .count {
+  margin-top: 10px;
+}

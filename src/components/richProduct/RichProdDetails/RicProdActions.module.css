@@ -1,0 +1,38 @@
+.ProductBtnActions {
+  display: flex;
+  justify-content: space-between;
+  gap: 4%;
+  margin-top: 8px;
+}
+.md-cart-button {
+  margin: 0 auto;
+  display: block;
+  width: 100%;
+  background-color: var(--clr-primary);
+  color: var(--clr-light);
+  border-radius: 2px;
+  padding: 1.5rem;
+  font-size: var(--normal-sm-font);
+  transition: all 0.3s ease-in;
+}
+
+.md-cart-button:hover,
+.md-cart-button:active {
+  background-color: var(--clr-primary-hover);
+}
+.md-buy-button {
+  margin: 0 auto;
+  display: block;
+  width: 100%;
+  background-color: var(--clr-yellow);
+  color: var(--clr-light);
+  border-radius: 2px;
+  padding: 1.5rem;
+  font-size: var(--normal-sm-font);
+  transition: all 0.3s ease-in;
+}
+
+.md-buy-button:hover,
+.md-buy-button:active {
+  background-color: var(--clr-yellow-hover);
+}

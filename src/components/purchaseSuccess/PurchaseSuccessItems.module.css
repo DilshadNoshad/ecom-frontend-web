@@ -1,0 +1,28 @@
+.delivery_dates-products {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  flex-flow: row wrap;
+  border-bottom: 1px solid var(--clr-gray);
+  padding: 20px 0;
+}
+.delivery_dates-products_img_con {
+  margin-right: auto;
+  display: flex;
+  justify-content: space-between;
+}
+
+.delivery_dates-products_img {
+  margin-left: 12px;
+  width: 80px;
+  height: 80px;
+}
+.delivery_dates-products_img img {
+  width: 100%;
+  height: 100%;
+}
+
+.delivery_dates-est-time span {
+  font-size: var(--normal-med-font);
+  font-weight: 600;
+}

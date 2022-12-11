@@ -1,0 +1,9 @@
+.scroll_tab-image {
+  width: 25px;
+  height: 25px;
+  margin: 4px;
+}
+.scroll_tab-image img {
+  height: 100%;
+  width: 100%;
+}

@@ -1,0 +1,80 @@
+.wrapper {
+  padding: 40px 24px;
+}
+
+.stepper {
+  position: relative;
+  justify-content: space-between;
+  flex-wrap: nowrap;
+  display: flex;
+}
+
+.stepper__step {
+  width: 140px;
+  text-align: center;
+  user-select: none;
+  cursor: default;
+  z-index: 1;
+}
+
+.stepper__step-icon {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  margin: auto;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  font-size: 2.8rem;
+  border: 4px solid #e0e0e0;
+  color: #e0e0e0;
+  background-color: #fff;
+  transition: background-color 0.3s cubic-bezier(0.4, 0, 0.2, 1) 0.7s,
+    border-color 0.3s cubic-bezier(0.4, 0, 0.2, 1) 0.7s,
+    color 0.3s cubic-bezier(0.4, 0, 0.2, 1) 0.7s;
+}
+
+.stepper__step-icon--finish {
+  border-color: #2dc258;
+  color: #2dc258;
+}
+
+.stepper__step-text {
+  text-transform: capitalize;
+  font-size: var(--normal-sm-font);
+  color: rgba(0, 0, 0, 0.8);
+  line-height: 1.25rem;
+  margin: 2.25rem 0 1.25rem;
+}
+
+.stepper__step-date {
+  font-size: var(--normal-xsm-font);
+  color: rgba(0, 0, 0, 0.26);
+  height: 0.875rem;
+}
+
+.stepper__line {
+  position: absolute;
+  top: 29px;
+  height: 4px;
+  width: 100%;
+}
+
+.stepper__line-background,
+.stepper__line-foreground {
+  position: absolute;
+  width: calc(100% - 140px);
+  margin: 0 70px;
+  height: 100%;
+}
+
+.stepper__line-background {
+  background: #e0e0e0;
+}
+
+.stepper__line-foreground {
+  background: #2dc258;
+  transition: width 1s cubic-bezier(0.4, 0, 0.2, 1);
+}

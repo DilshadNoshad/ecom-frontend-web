@@ -1,0 +1,63 @@
+.tolti_menu {
+  display: none;
+}
+@media (min-width: 800px) {
+  .tolti_menu {
+    display: block;
+    --scale: 0;
+    --border-clr: var(--clr-gray-light);
+    position: absolute;
+    top: 120%;
+    left: 50%;
+    /* transform: translateX(-50%) scale(var(--scale)); */
+    /* transition: 150ms transform; */
+    animation: bodygrow 0.3s ease-in-out forwards;
+    z-index: 19999;
+    padding: 10px;
+  }
+  .tolti_menu {
+    width: max-content;
+    max-width: 30rem;
+    min-height: 20rem;
+    border: 1px solid var(--border-clr);
+    background-color: var(--clr-light);
+  }
+
+  .tolti_menu::before {
+    content: "";
+    width: 10px;
+    height: 10px;
+    position: absolute;
+    top: -2%;
+    left: 50%;
+    background-color: var(--clr-light);
+    border-color: var(--border-clr);
+    border-left-width: 1px;
+    border-top-width: 1px;
+    border-left-style: solid;
+    border-top-style: solid;
+    animation: tipgrow 0.3s ease-in-out forwards;
+    z-index: -19999;
+  }
+}
+
+@keyframes bodygrow {
+  from {
+    opacity: 0;
+    transform: translateX(-50%) scale(0);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(-50%) scale(1);
+  }
+}
+@keyframes tipgrow {
+  from {
+    opacity: 0;
+    transform: translateX(-50%) scale(0);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(-50%) rotate(45deg) scale(1);
+  }
+}

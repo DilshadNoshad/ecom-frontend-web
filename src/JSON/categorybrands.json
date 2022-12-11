@@ -1,0 +1,32 @@
+{
+  "CategoryBrands": [
+    {
+      "id": 1,
+      "catBdImg": "https://lzd-img-global.slatic.net/g/p/mdc/96204fba9db2d0efe268ca475cbe495f.jpg_120x120q75.jpg_.webp"
+    },
+    {
+      "id": 2,
+      "catBdImg": "https://lzd-img-global.slatic.net/g/p/17f01646544bdc71a23304099b8e700b.jpg_120x120q75.jpg_.webp"
+    },
+    {
+      "id": 3,
+      "catBdImg": "https://lzd-img-global.slatic.net/g/p/52143b50442a4885c9fed5dbaeda0fd4.jpg_120x120q75.jpg_.webp"
+    },
+    {
+      "id": 4,
+      "catBdImg": "https://lzd-img-global.slatic.net/g/p/601a52684ee9b9bb8a6aaaf86afa8ab2.jpg_120x120q75.jpg_.webp"
+    },
+    {
+      "id": 5,
+      "catBdImg": "https://lzd-img-global.slatic.net/g/p/1d0a984c6868e88deb4b6b7fa58a2c98.jpg_120x120q75.jpg_.webp"
+    },
+    {
+      "id": 6,
+      "catBdImg": "https://lzd-img-global.slatic.net/g/p/mdc/f87a06e68df01adb871cbdb6a1bf7406.jpg_120x120q75.jpg_.webp"
+    },
+    {
+      "id": 7,
+      "catBdImg": "https://lzd-img-global.slatic.net/g/p/309cc58de8aac56c7ff8be61634511ee.jpg_120x120q75.jpg_.webp"
+    }
+  ]
+}

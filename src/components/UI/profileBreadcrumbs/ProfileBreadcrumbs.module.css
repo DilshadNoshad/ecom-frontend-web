@@ -1,0 +1,29 @@
+.breadcrumb_wrapper {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  align-items: center;
+}
+.breadcrumb_wrapper > h2 {
+  /* background-color: var(--clr-gray); */
+  height: 60px;
+  line-height: 60px;
+  font-size: var(--normal-bg-font);
+  color: var(--clr-secondary-main);
+  letter-spacing: 0.09px;
+}
+.breadcrumb_btn_inner {
+  font-size: 12px;
+  color: var(--clr-secondary-main);
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.breadcrumb_btn_inner [data_nmi="add_ico"] {
+  color: var(--clr-primary);
+  margin-right: 4px;
+  width: 16px;
+  height: 16px;
+}

@@ -1,0 +1,8 @@
+.product_delivery {
+  flex: 1 1 26.5%;
+  background-color: var(--clr-light);
+}
+.product_options {
+  padding: 10px;
+  background-color: var(--clr-light-gray);
+}

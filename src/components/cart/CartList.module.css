@@ -1,0 +1,38 @@
+.list_header-main {
+  margin-right: auto;
+  font-size: var(--normal-sm-font);
+  color: var(--clr-secondary-main);
+  text-transform: uppercase;
+}
+
+.list_header-main input[type="checkbox"] {
+  margin-right: 16px;
+}
+
+.list_header-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.list_header {
+  padding: 0.8rem 1.2rem;
+  background: var(--clr-light);
+}
+
+.selected_delete-btn {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  font-size: var(--normal-xsm-font);
+  color: var(--clr-secondary-main);
+  text-transform: uppercase;
+  cursor: pointer;
+}
+.selected_delete-btn [data_nmi="trash_ico"] {
+  font-size: 20px;
+  cursor: pointer;
+  margin-right: 8px;
+  color: var(--clr-secondary-main);
+}

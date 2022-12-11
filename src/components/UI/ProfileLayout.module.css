@@ -1,0 +1,19 @@
+.dahb-main {
+  /* display: flex;
+    justify-content: space-between;
+    flex-flow: row nowrap;
+    min-width: 1188px; */
+  display: grid;
+  grid-template-columns: 150px 1fr;
+  column-gap: 2%;
+  row-gap: 20px;
+  align-items: start;
+  max-width: 1228px;
+  padding: 24px 20px 40px;
+  margin: 0 auto;
+}
+.muradi-dahb-right {
+  /* background-color: var(--clr-light); */
+  height: 100%;
+  width: 100%;
+}

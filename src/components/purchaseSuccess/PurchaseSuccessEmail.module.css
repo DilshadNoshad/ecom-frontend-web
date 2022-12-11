@@ -1,0 +1,23 @@
+.delivery_dates-table {
+  padding: 0 12px 12px 12px;
+  border: 2px solid var(--clr-gray);
+  margin-top: 12px;
+}
+.confirmation_msg-contain {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  flex-flow: row wrap;
+  padding: 20px 0;
+}
+.confirmation_msg-contain p {
+  font-size: var(--normal-med-font);
+  flex-basis: 90.5%;
+  overflow: hidden;
+}
+.confirmation_msg-contain [data_nmi="mail_ico"] {
+  font-size: 28px;
+  margin-right: auto;
+  color: var(--clr-link);
+  flex-basis: 5.5%;
+}

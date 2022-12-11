@@ -1,0 +1,35 @@
+.previous-picker-handler,
+.next-picker-handler {
+  text-align: center;
+  cursor: pointer;
+  overflow: hidden;
+  transition: all 0.2s;
+  display: block;
+  border: 4px solid transparent;
+  color: var(--clr-dark_gray);
+  background-color: var(--clr-gray);
+  line-height: 0.2rem;
+  font-size: var(--normal-bg-font);
+}
+.previous-picker-handler:hover,
+.next-picker-handler:hover {
+  color: var(--clr-light);
+  border-color: transparent;
+  background-color: var(--clr-gray-light);
+}
+
+.quan_input {
+  user-select: none;
+}
+
+.quan_input input {
+  background-color: var(--clr-light);
+  width: 50px;
+  height: 30px;
+  border: none;
+  text-align: center;
+}
+.quan_input input:focus {
+  outline: none;
+  user-select: none;
+}

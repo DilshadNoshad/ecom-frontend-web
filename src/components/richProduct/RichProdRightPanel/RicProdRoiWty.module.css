@@ -1,0 +1,34 @@
+.app_guide-wrap {
+  padding: 10px 6px;
+}
+.guideApp {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.guideApp .qr_code-info {
+  padding: 9px 16px 10px;
+  flex-basis: 58.5%;
+  align-items: center;
+  cursor: pointer;
+  background: var(--clr-light);
+  box-shadow: 1px 2px 14px #ccc;
+  border-radius: 5px;
+}
+.guideApp .qr_code {
+  flex-basis: 36.5%;
+}
+.guideApp .qr_code-info .gr_app_img {
+  width: 40px;
+  height: 40px;
+}
+.guideApp .gr_app_img img {
+  width: 100%;
+  height: 100%;
+}
+.quide_para {
+  font-size: var(--normal-xsm-font);
+  color: var(--clr-dark_gray);
+}

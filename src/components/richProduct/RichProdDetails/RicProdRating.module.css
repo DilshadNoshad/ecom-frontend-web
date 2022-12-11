@@ -1,0 +1,22 @@
+.product-rating-link {
+  color: var(--clr-link);
+  font-size: var(--normal-xsm-font);
+  text-decoration: none;
+}
+.product-rating-link:hover {
+  color: var(--clr-link-hover);
+  text-decoration: underline;
+}
+.product-ratings {
+  margin-right: auto;
+}
+
+.product-rating-layer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.card-rating-star {
+  width: 20px;
+  height: 20px;
+}

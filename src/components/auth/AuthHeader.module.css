@@ -1,0 +1,25 @@
+.auth_Title h1 {
+  font-size: var(--normal-bg-font);
+  color: var(--clr-secondary-main);
+  font-weight: 400;
+  margin-right: auto;
+  margin-bottom: 10px;
+}
+
+.auth_Title {
+  display: flex;
+  justify-content: flex-end;
+  flex-flow: row wrap;
+  align-items: center;
+  margin: 50px 15px 0;
+}
+
+.auth_Others span {
+  color: var(--clr-dark_gray);
+  font-size: var(--normal-xsm-font);
+}
+
+.auth_Others a {
+  color: var(--clr-link);
+  text-decoration: none;
+}

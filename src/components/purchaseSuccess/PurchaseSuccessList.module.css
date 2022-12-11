@@ -1,0 +1,33 @@
+.delivery_dates-table {
+  padding: 0 12px 12px 12px;
+  border: 2px solid var(--clr-gray);
+  margin-top: 12px;
+}
+
+.goto_order-wrapper {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  flex-flow: row wrap;
+  padding: 20px 0;
+}
+.goto_order-wrapper .goto_order-para {
+  font-size: var(--normal-font);
+  margin-right: auto;
+}
+.gotoOrder {
+  display: block;
+  padding: 1.25rem 2rem;
+  color: var(--clr-link);
+  border: 1px solid var(--clr-link);
+  transition: all 0.3s ease-in;
+  font-size: var(--normal-sm-font);
+  font-weight: 500;
+  border-radius: 2px;
+  text-decoration: none;
+}
+.gotoOrder:hover,
+.gotoOrder:active {
+  background-color: var(--clr-link-hover);
+  color: var(--clr-light);
+}

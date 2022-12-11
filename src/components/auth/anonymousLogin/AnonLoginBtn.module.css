@@ -1,0 +1,16 @@
+.md-Anon-signin-button {
+  margin: 0 auto;
+  display: block;
+  width: 30rem;
+  background-color: var(--clr-primary);
+  color: var(--clr-light);
+  border-radius: 2px;
+  padding: 1.5rem;
+  font-size: var(--normal-sm-font);
+  transition: all 0.3s ease-in;
+}
+
+.md-Anon-signin-button:hover,
+.md-Anon-signin-button:active {
+  background-color: var(--clr-primary-hover);
+}

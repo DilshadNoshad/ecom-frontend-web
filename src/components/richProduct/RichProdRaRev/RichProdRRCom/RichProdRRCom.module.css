@@ -1,0 +1,42 @@
+.mod_empty_desc {
+  border-top: 1px solid var(--clr-gray-light);
+  text-align: center;
+  height: 48rem;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.mod_empty_des_text {
+  margin: 3.5rem 0;
+}
+
+.empty-text {
+  text-align: center;
+  font-size: var(--normal-sm-font);
+  color: var(--clr-dark_gray);
+  margin: 0;
+  padding: 0;
+}
+
+.mod_empty_desc_img {
+  margin: 0 auto;
+}
+
+[data_emoji="emoji_sad"],
+[data_emoji="emoji_happy"] {
+  width: 55.555px;
+  height: 55.555px;
+}
+.mod_empty_desc_img [data_emoji="emoji_happy"] {
+  background: var(--clr-light);
+  z-index: 1;
+  border-radius: 50%;
+}
+.mod_empty_desc_img [data_emoji="emoji_sad"] {
+  position: relative;
+  left: -15px;
+  top: 13px;
+  z-index: 0;
+}

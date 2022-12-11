@@ -1,0 +1,9 @@
+.close-btn {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  display: block;
+  font-size: 4.2rem;
+  color: var(--clr-primary);
+  cursor: pointer;
+}

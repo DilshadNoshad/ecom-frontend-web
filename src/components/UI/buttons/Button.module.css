@@ -1,0 +1,15 @@
+.button {
+  font: inherit;
+  cursor: pointer;
+  word-wrap: break-word;
+  max-width: 100%;
+  text-align: center;
+  text-transform: uppercase;
+  user-select: none;
+  border: 0;
+  outline: 0;
+}
+
+.button:focus {
+  outline: none;
+}

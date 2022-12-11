@@ -1,0 +1,25 @@
+.filtab {
+  border-top: 1px solid var(--clr-gray-light-b);
+  padding-top: 16px;
+}
+
+.filtab-h {
+  font-size: 14px;
+  color: var(--clr-secondary);
+}
+.filtab-ops {
+  margin-top: 10px;
+  padding-bottom: 20px;
+}
+
+.filtab-ops label {
+  display: block;
+  font-size: 13px;
+  color: var(--clr-dark_gray);
+  line-height: 25px;
+  user-select: none;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  max-width: 150px;
+}

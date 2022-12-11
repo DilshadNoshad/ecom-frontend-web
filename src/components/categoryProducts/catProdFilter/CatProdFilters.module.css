@@ -1,0 +1,18 @@
+.head {
+  font-size: 14px;
+  color: var(--clr-secondary);
+}
+
+.cat {
+  margin-top: 10px;
+  padding-bottom: 20px;
+}
+.cat a {
+  text-decoration: none;
+  color: var(--clr-primary);
+  display: block;
+  font-size: 14px;
+  line-height: 18px;
+  font-weight: 600;
+  text-transform: uppercase;
+}

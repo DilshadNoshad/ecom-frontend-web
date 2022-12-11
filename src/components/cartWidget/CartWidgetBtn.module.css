@@ -1,0 +1,46 @@
+.btn-down {
+  box-shadow: 0 -2px 4px rgb(0 0 0 / 8%), 0 -4px 12px rgb(0 0 0 / 8%);
+  max-height: 100px;
+  min-height: 50px;
+  width: 100%;
+  background: var(--clr-light);
+  border-top: 1px solid var(--clr-gray-light);
+  padding: 0.8rem 1.6rem;
+}
+.btn-down .cw-total_val {
+  font-weight: 700;
+  line-height: 1.2;
+  letter-spacing: -0.02rem;
+  font-size: var(--normal-med-font);
+  margin-bottom: 0.5rem;
+}
+.goto_cart-btn {
+  margin: 0 auto;
+  display: block;
+  width: 100%;
+  background-color: var(--clr-primary);
+  color: var(--clr-light);
+  border-radius: 2px;
+  padding: 1.5rem;
+  font-size: var(--normal-sm-font);
+  transition: all 0.3s ease-in;
+  text-decoration: none;
+}
+.goto_cart-btn:hover,
+.goto_cart-btn:active {
+  background-color: var(--clr-primary-hover);
+}
+.button {
+  /* font: inherit; */
+  cursor: pointer;
+  word-wrap: break-word;
+  max-width: 100%;
+  text-align: center;
+  text-transform: uppercase;
+  user-select: none;
+  border: 0;
+  outline: 0;
+}
+.button:focus {
+  outline: none;
+}

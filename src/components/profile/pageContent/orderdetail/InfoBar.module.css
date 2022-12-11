@@ -1,0 +1,28 @@
+.head {
+  padding: 20px 24px;
+  font-size: 14px;
+  line-height: 16px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.btnback {
+  cursor: pointer;
+}
+.btnback ion-icon {
+  display: inline-block;
+  margin: 0 5px 0 0;
+  font-size: var(--normal-med-font);
+  line-height: 16px;
+  vertical-align: bottom;
+  position: relative;
+}
+
+.sep {
+  margin: 0 16px;
+}
+
+.orderstatus {
+  color: #ee4d2d;
+  text-transform: uppercase;
+}

@@ -1,0 +1,30 @@
+.prodfilbar {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: flex-end;
+  align-items: center;
+}
+.filbardetail {
+  margin-right: auto;
+}
+
+.fil-h-info {
+  color: var(--clr-dark_gray);
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  max-width: 600px;
+  overflow: hidden;
+  font-size: 14px;
+}
+.fil-h-info h2 {
+  font-size: var(--normal-bg-font);
+  font-weight: 100;
+  color: var(--clr-secondary);
+  text-transform: capitalize;
+}
+
+.fil-sort {
+  font-size: 13px;
+  line-height: 40px;
+  height: 40px;
+}

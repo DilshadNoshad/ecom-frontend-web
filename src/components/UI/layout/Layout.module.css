@@ -1,0 +1,43 @@
+.sec-title {
+  font-family: "Roboto", sans-serif;
+  font-size: var(--normal-med-font);
+  color: var(--clr-secondary-main);
+  text-transform: capitalize;
+}
+
+.flexlayout {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+.flexlayout a {
+  margin-left: auto;
+  color: var(--clr-link);
+  text-decoration: none;
+  padding: 10px 20px 0 10px;
+  position: relative;
+  font-size: var(--normal-xsm-font);
+}
+.flexlayout a::after {
+  content: "";
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' class='ionicon' viewBox='0 0 512 512'%3E%3Ctitle%3EChevron Forward%3C/title%3E%3Cpath fill='none' stroke='%231a9cb7' stroke-linecap='round' stroke-linejoin='round' stroke-width='48' d='M184 112l144 144-144 144'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  position: absolute;
+  width: 20px;
+  height: 16px;
+  top: 0;
+  right: 0;
+  transform: translate(10%, 50%);
+  color: var(--clr-link);
+}
+@media (min-width: 768px) {
+  .sec-title {
+    font-size: var(--normal-bg-font);
+  }
+  .flexlayout a {
+    font-size: var(--normal-sm-font);
+  }
+  .flexlayout a::after {
+    transform: translate(10%, 60%);
+  }
+}

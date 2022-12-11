@@ -1,0 +1,52 @@
+.delivery_dates-wrap {
+  background-color: var(--clr-light);
+}
+.delivery_dates-container {
+  margin: 1.5rem auto;
+  max-width: 800px;
+  padding: 4rem 0;
+}
+
+.delivery_dates_title {
+  text-transform: capitalize;
+  font-size: 18px;
+  color: var(--clr-secondary-main);
+  background-color: var(--clr-light);
+}
+
+.shop_more-btn_flex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 4rem;
+}
+.shop_more-btn {
+  margin: 0 auto;
+  display: block;
+  width: 125px;
+  background-color: var(--clr-primary);
+  color: var(--clr-light);
+  border-radius: 2px;
+  padding: 1.5rem;
+  font-size: var(--normal-sm-font);
+  transition: all 0.3s ease-in;
+  text-decoration: none;
+}
+.shop_more-btn:hover,
+.shop_more-btn:active {
+  background-color: var(--clr-primary-hover);
+}
+.button {
+  /* font: inherit; */
+  cursor: pointer;
+  word-wrap: break-word;
+  max-width: 100%;
+  text-align: center;
+  text-transform: uppercase;
+  user-select: none;
+  border: 0;
+  outline: 0;
+}
+.button:focus {
+  outline: none;
+}

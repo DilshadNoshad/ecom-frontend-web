@@ -1,0 +1,54 @@
+.address-book-card {
+  font-size: 12px;
+  border: 1px solid #e5e5e5;
+  border-radius: 4px;
+  padding: 20px;
+  line-height: 16px;
+  margin-bottom: 20px;
+  cursor: pointer;
+  flex: 0 1 calc((100% / 2) - 1%);
+}
+
+a.link {
+  color: #1a9cb7;
+  text-decoration: none;
+  font-size: var(--normal-xsm-font);
+}
+
+.address-book-card .address-book-card-name,
+.address-book-card .address-book-card-phone {
+  margin-bottom: 8px;
+}
+.address-book-card .address-book-card-address {
+  margin-bottom: 20px;
+}
+
+.address-book-card-tags {
+  display: flex;
+  justify-content: flex-start;
+  gap: 2%;
+}
+.address-book-card-tag {
+  padding: 2px 6px;
+  line-height: 14px;
+  background: rgba(0, 119, 135, 0.08);
+  border-radius: 2px;
+  color: #007787;
+}
+.address-book-card-tag {
+  padding: 2px 6px;
+  line-height: 14px;
+  background: rgba(0, 119, 135, 0.08);
+  border-radius: 2px;
+  color: #007787;
+}
+
+.address-book-card-tag-default {
+  padding: 2px 6px;
+  line-height: 14px;
+  background: #f5f5f5;
+  border-radius: 2px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}

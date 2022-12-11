@@ -1,0 +1,43 @@
+.control {
+  position: relative;
+  margin-bottom: 24px;
+}
+
+.control label {
+  font-size: var(--normal-xsm-font);
+  height: 15px;
+  overflow: hidden;
+  color: var(--clr-secondary-main);
+  display: block;
+  margin-bottom: 5px;
+}
+
+.control .required_input::after {
+  content: "*";
+}
+.control input {
+  width: 100%;
+  border: 1px solid var(--clr-gray-light);
+  font-size: var(--normal-sm-font);
+  height: 40px;
+  padding: 0 35px 0 10px;
+  outline: none;
+  color: var(--clr-secondary-input);
+}
+
+.input-icon {
+  position: absolute;
+  top: 50%;
+  right: 0;
+  transform: translate(-50%, 0%);
+  font-size: 18px;
+  cursor: pointer;
+}
+.invalid input {
+  border: 1px solid #b40e0e;
+  background-color: #fddddd;
+}
+.error-text {
+  color: #b40e0e;
+  margin-bottom: 24px;
+}

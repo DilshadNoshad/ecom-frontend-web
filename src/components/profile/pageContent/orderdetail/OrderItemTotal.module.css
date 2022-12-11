@@ -1,0 +1,27 @@
+.oit_tab {
+  padding: 0 24px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  text-align: right;
+  border-bottom: 1px dotted rgba(0, 0, 0, 0.09);
+}
+
+.oit_tab_q {
+  padding: 13px 10px;
+  color: rgba(0, 0, 0, 0.54);
+  font-size: var(--normal-xsm-font);
+}
+.oit_tab_a {
+  padding: 13px 0 13px 10px;
+  width: 240px;
+  border-left: 1px dotted rgba(0, 0, 0, 0.09);
+  justify-content: flex-end;
+  word-wrap: break-word;
+  color: rgba(0, 0, 0, 0.8);
+  font-size: var(--normal-sm-font);
+}
+.oit_tab_a .oit_total {
+  color: var(--clr-primary);
+  font-size: 24px;
+}

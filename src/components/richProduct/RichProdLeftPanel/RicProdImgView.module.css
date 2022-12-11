@@ -1,0 +1,22 @@
+.product_gallery {
+  flex: 1 1 21.5%;
+  margin-top: 10px;
+  margin-left: 10px;
+}
+.product_preview {
+  height: 100%;
+  width: auto;
+  text-align: center;
+}
+.product_preview > div > img {
+  height: 300px !important;
+  width: 300px !important;
+  object-fit: contain;
+  object-position: center;
+}
+.product_preview div + div {
+  z-index: 1;
+}
+.product_preview div {
+  cursor: zoom-in !important;
+}

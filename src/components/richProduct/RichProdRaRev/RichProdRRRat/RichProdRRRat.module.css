@@ -1,0 +1,7 @@
+.mod_rating {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  padding: 20px 24px;
+  align-items: center;
+}

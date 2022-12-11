@@ -1,0 +1,61 @@
+.nav_menu-dropdown {
+  width: 200px;
+  height: 344px;
+  position: absolute;
+  top: 0;
+  left: 90px;
+  box-shadow: 0 0 2px 0 rgb(0 0 0 / 25%);
+  background-color: var(--clr-light);
+  z-index: 200;
+  display: none;
+}
+.nav_menu-dropdown ul {
+  padding: 8px 0 12px;
+  list-style: none;
+  height: 100%;
+  margin: 0;
+}
+.nav_menu-dropdown ul li {
+  display: block;
+  padding-left: 8px;
+  height: 27px;
+  line-height: 27px;
+}
+.nav_menu-dropdown ul li:hover,
+.nav_menu-dropdown ul li:hover a {
+  background-color: var(--clr-gray);
+  color: var(--clr-primary);
+}
+.nav_menu-dropdown ul li a {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: inline-block;
+  white-space: nowrap;
+  width: 172px;
+  text-decoration: none;
+  font-size: 13px;
+  line-height: 27px;
+  color: var(--clr-dark_gray);
+  cursor: pointer;
+  position: relative;
+  text-transform: uppercase;
+}
+.nav_menu-dropdown ul li:hover a::after {
+  content: "";
+  font-size: var(--normal-sm-font);
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' class='ionicon' viewBox='0 0 512 512'%3E%3Ctitle%3EChevron Forward%3C/title%3E%3Cpath fill='none' stroke='%23f57024' stroke-linecap='round' stroke-linejoin='round' stroke-width='48' d='M184 112l144 144-144 144'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  position: absolute;
+  width: 28px;
+  height: 16px;
+  top: 45%;
+  right: 0;
+  transform: translate(50%, -50%);
+  color: var(--clr-primary);
+}
+
+@media (min-width: 992px) {
+  .nav_menu-dropdown {
+    display: block;
+  }
+}

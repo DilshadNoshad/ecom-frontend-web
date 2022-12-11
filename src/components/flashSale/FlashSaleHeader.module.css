@@ -1,0 +1,68 @@
+.flash_sale-header {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: flex-end;
+  align-items: center;
+  list-style-type: none;
+  border-bottom: 1px solid var(--clr-gray-light);
+  margin: 0 0 12px 0;
+  padding: 10px 10px 10px 15px;
+}
+
+.flash_sale-header li:nth-child(3) {
+  margin-right: auto;
+  margin-left: 0.75rem;
+}
+
+.flash_sale-header li:nth-child(1) {
+  flex-basis: 100%;
+}
+.flash_sale-title {
+  font-size: var(--normal-sm-font);
+  color: var(--clr-primary);
+}
+
+.flash_sale-timer {
+  font-size: var(--normal-xsm-font);
+  color: var(--clr-secondary);
+}
+
+.flash_sale-button {
+  display: block;
+  padding: 0.75rem 0.75rem;
+  color: var(--clr-primary);
+  border: 1px solid var(--clr-primary);
+  transition: all 0.3s ease-in;
+  font-size: var(--normal-xxsm-font);
+  font-weight: 500;
+
+  border-radius: 2px;
+
+  text-decoration: none;
+}
+.flash_sale-button:hover,
+.flash_sale-button:active {
+  background-color: var(--clr-primary);
+  color: var(--clr-light);
+}
+
+@media (min-width: 550px) {
+  .flash_sale-header li:nth-child(1) {
+    flex-basis: auto;
+  }
+  .flash_sale-header li:nth-child(2) {
+    margin-left: 4rem;
+  }
+  .flash_sale-header li:nth-child(3) {
+    margin-right: auto;
+    margin-left: 4rem;
+  }
+
+  .flash_sale-button {
+    font-size: var(--normal-sm-font);
+  }
+
+  .flash_sale-timer {
+    font-size: var(--normal-sm-font);
+  }
+}

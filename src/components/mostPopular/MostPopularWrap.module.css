@@ -1,0 +1,16 @@
+.most_popular-container {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(100px, 1fr));
+  grid-template-rows: auto;
+}
+
+@media (min-width: 550px) {
+  .most_popular-container {
+    grid-template-columns: repeat(3, minmax(100px, 1fr));
+  }
+}
+@media (min-width: 800px) {
+  .most_popular-container {
+    grid-template-columns: repeat(5, minmax(100px, 1fr));
+  }
+}

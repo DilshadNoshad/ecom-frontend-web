@@ -1,0 +1,17 @@
+.check-wrap {
+  display: flex;
+  align-items: center;
+  flex-flow: row nowrap;
+}
+
+.tab-checkbox + span {
+  padding-left: 8px;
+  padding-right: 8px;
+}
+
+.filtab-btn {
+  margin-top: 5px;
+  color: var(--clr-link);
+  cursor: pointer;
+  font-size: 13px;
+}

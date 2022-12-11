@@ -1,0 +1,180 @@
+{
+  "Collections": [
+    {
+      "id": 1,
+      "collTitle": "Realme",
+      "collTotalItem": "25,374",
+      "collThumbnails": [
+        {
+          "id": "t1",
+          "image": "https://lzd-img-global.slatic.net/g/p/da4db07718237c93cc85000121191ed0.jpg_720x720q80.jpg_.webp",
+          "alt": "mobileOne"
+        },
+        {
+          "id": "t2",
+          "image": "https://ph-live-01.slatic.net/p/bdaaa9974c8737b0c9345e691efbd5e1.jpg",
+          "alt": "mobileTwo"
+        },
+        {
+          "id": "t3",
+          "image": "https://ph-live-01.slatic.net/p/5b9855b35af8cd5b5124dc3b6bbec28b.jpg",
+          "alt": "mobileThree"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "collTitle": "Refreshing Drink",
+      "collTotalItem": "15,000",
+      "collThumbnails": [
+        {
+          "id": "r1",
+          "image": "https://ph-live-01.slatic.net/p/340a64fe4b647d2f23a1c6d4fb42f66d.jpg",
+          "alt": "mobileOne"
+        },
+        {
+          "id": "r2",
+          "image": "https://ph-live-01.slatic.net/p/ab9d1107aa584c960a66ca97000f0a51.jpg",
+          "alt": "mobileTwo"
+        },
+        {
+          "id": "r3",
+          "image": "https://lzd-img-global.slatic.net/g/p/862cdd387427030916856954ae5220d9.jpg_720x720q80.jpg_.webp",
+          "alt": "mobileThree"
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "collTitle": "Toys",
+      "collTotalItem": "10,233",
+      "collThumbnails": [
+        {
+          "id": "T1",
+          "image": "https://lzd-img-global.slatic.net/g/p/66283894f67214798f3a19dcd8ccfd6e.jpg_720x720q80.jpg_.webp",
+          "alt": "mobileOne"
+        },
+        {
+          "id": "T2",
+          "image": "https://lzd-img-global.slatic.net/g/p/28caf975f4b98109e3cd001ddf0ec81c.jpg_720x720q80.jpg_.webp",
+          "alt": "mobileTwo"
+        },
+        {
+          "id": "T3",
+          "image": "https://lzd-img-global.slatic.net/g/p/4fa162146214a59b339ce1af4ca15bf8.jpg_720x720q80.jpg_.webp",
+          "alt": "mobileThree"
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "collTitle": "Cereals",
+      "collTotalItem": "5,142",
+      "collThumbnails": [
+        {
+          "id": "c1",
+          "image": "https://lzd-img-global.slatic.net/g/p/mdc/85c33be3ae8ad6a5ae6bbbc385a3ad58.png_720x720q80.jpg_.webp",
+          "alt": "mobileOne"
+        },
+        {
+          "id": "c2",
+          "image": "https://lzd-img-global.slatic.net/g/p/57ad092ff0a91cb9f945c4a387321e1a.jpg_720x720q80.jpg_.webp",
+          "alt": "mobileTwo"
+        },
+        {
+          "id": "c3",
+          "image": "https://lzd-img-global.slatic.net/g/p/d6f3d839f4b8f1021e06df03a63d10cb.jpg_720x720q80.jpg_.webp",
+          "alt": "mobileThree"
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "collTitle": "Baby Wipes",
+      "collTotalItem": "124",
+      "collThumbnails": [
+        {
+          "id": "b1",
+          "image": "https://lzd-img-global.slatic.net/g/p/6b2996f3ceaa342c696130e9ca829a95.jpg_200x200q80.jpg_.webp",
+          "alt": "mobileOne"
+        },
+        {
+          "id": "b2",
+          "image": "https://lzd-img-global.slatic.net/g/p/aef0f0f7a8fc44f07845d4e3378275f9.png_200x200q80.jpg_.webp",
+          "alt": "mobileTwo"
+        },
+        {
+          "id": "b3",
+          "image": "https://lzd-img-global.slatic.net/g/p/7de9915d86f78082949463c9077e09a6.png_200x200q80.jpg_.webp",
+          "alt": "mobileThree"
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "collTitle": "Tshirts",
+      "collTotalItem": "45,100",
+      "collThumbnails": [
+        {
+          "id": "ts1",
+          "image": "https://lzd-img-global.slatic.net/g/p/4efb0c25ae3638c03cfd8bb0ae14fa27.jpg_200x200q75.jpg_.webp",
+          "alt": "mobileOne"
+        },
+        {
+          "id": "ts2",
+          "image": "https://lzd-img-global.slatic.net/g/p/6e4e5de62bc07fe26fef7e0c04de092c.jpg_200x200q75.jpg_.webp",
+          "alt": "mobileTwo"
+        },
+        {
+          "id": "ts3",
+          "image": "https://lzd-img-global.slatic.net/g/p/d963f984281151cc610698f0fd3dc031.jpg_200x200q75.jpg_.webp",
+          "alt": "mobileThree"
+        }
+      ]
+    },
+    {
+      "id": 7,
+      "collTitle": "Wireless Earbuds",
+      "collTotalItem": "7,231",
+      "collThumbnails": [
+        {
+          "id": "w1",
+          "image": "https://my-test-11.slatic.net/p/bd28c1a67f8d7d1b8b0ed47bc1d88e8d.jpg",
+          "alt": "mobileOne"
+        },
+        {
+          "id": "w2",
+          "image": "https://lzd-img-global.slatic.net/g/p/0aab226578738edd2a7833567e434d20.jpg_200x200q75.jpg_.webp",
+          "alt": "mobileTwo"
+        },
+        {
+          "id": "w3",
+          "image": "https://lzd-img-global.slatic.net/g/p/0035dc367d03907d23aa1d82579b7586.jpg_200x200q75.jpg_.webp",
+          "alt": "mobileThree"
+        }
+      ]
+    },
+    {
+      "id": 8,
+      "collTitle": "Fid Aid Masks",
+      "collTotalItem": "1,464",
+      "collThumbnails": [
+        {
+          "id": "t1",
+          "image": "https://lzd-img-global.slatic.net/g/p/6017d06beb6edb779ad78c01dad6763d.jpg_200x200q80.jpg_.webp",
+          "alt": "mobileOne"
+        },
+        {
+          "id": "t2",
+          "image": "https://lzd-img-global.slatic.net/g/p/3509fff245007a60208d65cac8805b61.jpg_200x200q80.jpg_.webp",
+          "alt": "mobileTwo"
+        },
+        {
+          "id": "t3",
+          "image": "https://lzd-img-global.slatic.net/g/p/f2fd522cfcaae07bd335870500053a78.jpg_200x200q80.jpg_.webp",
+          "alt": "mobileThree"
+        }
+      ]
+    }
+  ]
+}

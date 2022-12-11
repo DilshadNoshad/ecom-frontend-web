@@ -1,0 +1,25 @@
+.button {
+  font: inherit;
+  cursor: pointer;
+  word-wrap: break-word;
+  max-width: 100%;
+  text-align: center;
+  font-size: 14px;
+  text-transform: uppercase;
+  background-color: transparent;
+  user-select: none;
+}
+
+.button:focus {
+  outline: none;
+}
+
+button:disabled,
+button:focus:disabled,
+button:hover:disabled,
+button:active:disabled {
+  background: var(--clr-gray-light);
+  border-color: var(--clr-gray-light);
+  color: var(--clr-dark_gray);
+  cursor: not-allowed;
+}

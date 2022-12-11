@@ -1,0 +1,24 @@
+.product_img-select {
+  position: relative;
+  margin-top: 8px;
+  margin-right: 12px;
+  overflow: hidden;
+  width: 36px;
+  height: 36px;
+  text-align: center;
+  border: 1px solid var(--clr-dark_gray);
+  border-radius: 2px;
+  padding: 1px;
+  cursor: pointer;
+}
+
+.active {
+  border-color: var(--clr-primary);
+}
+
+.product_img-select img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  object-position: center;
+}

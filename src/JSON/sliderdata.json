@@ -1,0 +1,46 @@
+{
+  "HeroSlider": [
+    {
+      "id": 1,
+      "sliderImg": "https://icms-image.slatic.net/images/ims-web/f71b9934-9582-425b-81a2-dbbde8f2e33f.jpg",
+      "sliderAlt": "img1",
+      "sliderBack": "#ffffff"
+    },
+    {
+      "id": 2,
+      "sliderImg": "https://lzd-img-global.slatic.net/g/icms/images/ims-web/fa052584-062d-4009-a21c-4c593eef17b8.jpg_1200x1200q90.jpg_.webp",
+      "sliderAlt": "img2",
+      "sliderBack": "#6fc46a"
+    },
+    {
+      "id": 3,
+      "sliderImg": "https://lzd-img-global.slatic.net/g/icms/images/ims-web/af7e6a55-1022-4e7a-99ee-f1fe12a69702.jpg_1200x1200q90.jpg_.webp",
+      "sliderAlt": "img3",
+      "sliderBack": "#b11c23"
+    },
+    {
+      "id": 4,
+      "sliderImg": "https://lzd-img-global.slatic.net/g/icms/images/ims-web/99cb5145-c741-404b-9ab2-59f67692ab8a.jpg_1200x1200q90.jpg",
+      "sliderAlt": "img4",
+      "sliderBack": "#90190F"
+    },
+    {
+      "id": 5,
+      "sliderImg": "https://lzd-img-global.slatic.net/g/icms/images/ims-web/685e1cf5-66e1-4c7d-ba97-94650f7b2f25.jpg_1200x1200q90.jpg_.webp",
+      "sliderAlt": "img5",
+      "sliderBack": "#FECAE0"
+    },
+    {
+      "id": 6,
+      "sliderImg": "https://lzd-img-global.slatic.net/g/icms/images/ims-web/25deda94-1b2b-4eb9-9e7b-0bb540ea4996.jpg_1200x1200q90.jpg_.webp",
+      "sliderAlt": "img6",
+      "sliderBack": "#E7E7E3"
+    },
+    {
+      "id": 7,
+      "sliderImg": "https://lzd-img-global.slatic.net/g/icms/images/ims-web/c84af4fe-afed-4616-991e-5b5f43d07117.jpg_1200x1200q90.jpg_.webp",
+      "sliderAlt": "img7",
+      "sliderBack": "#118AE1"
+    }
+  ]
+}

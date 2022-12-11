@@ -1,0 +1,28 @@
+{
+  "MallTabs": [
+    {
+      "id": 1,
+      "tabName": "load & eStore",
+      "tabImg": "https://laz-img-cdn.alicdn.com/images/ims-web/TB18x8whRr0gK0jSZFnXXbRRXXa.png",
+      "tabAlt": "img1"
+    },
+    {
+      "id": 2,
+      "tabName": "Muradi Mall",
+      "tabImg": "https://laz-img-cdn.alicdn.com/images/ims-web/TB1whF0i9slXu8jSZFuXXXg7FXa.png",
+      "tabAlt": "img2"
+    },
+    {
+      "id": 3,
+      "tabName": "Vouchers",
+      "tabImg": "https://laz-img-cdn.alicdn.com/images/ims-web/TB1x.lwhHj1gK0jSZFuXXcrHpXa.png",
+      "tabAlt": "img3"
+    },
+    {
+      "id": 4,
+      "tabName": "Free Shipping",
+      "tabImg": "https://icms-image.slatic.net/images/ims-web/60b5d5ad-7029-41ca-8a75-535f48643ae0.png",
+      "tabAlt": "img4"
+    }
+  ]
+}

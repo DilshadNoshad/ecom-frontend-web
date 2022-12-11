@@ -1,0 +1,88 @@
+/* footer four part  start*/
+.footer_four {
+  background-color: var(--clr-light);
+  padding: 40px 0;
+}
+
+.footer_container {
+  display: flex;
+  flex-flow: column wrap;
+  align-items: center;
+}
+
+.footer_inner {
+  flex-basis: 100%;
+  margin-bottom: 3em;
+}
+
+.footer_four h3 {
+  margin: 5px 10px 5px 0;
+  color: var(--clr-secondary-main);
+  font-weight: 300;
+  line-height: 20px;
+  text-transform: capitalize;
+  font-size: var(--normal-font);
+}
+.footer_four a {
+  text-decoration: none;
+  display: inline-block;
+  margin-right: 8px;
+}
+
+.foot-ico {
+  background-image: url("../../../assets/images/collageImage.png");
+  background-repeat: no-repeat;
+  display: inline-block;
+  width: 36px;
+  height: 36px;
+}
+
+.foot_copy_right {
+  text-align: end;
+  line-height: 30px;
+  font-size: var(--normal-sm-font);
+  color: var(--clr-dark_gray);
+  font-weight: 200;
+}
+
+/* Fotter img Position */
+
+.country_one {
+  background-position: -164px -245px;
+}
+
+.social_one {
+  background-position: -281px -164px;
+}
+.social_two {
+  background-position: -281px -123px;
+}
+.social_three {
+  background-position: -281px -41px;
+}
+.social_four {
+  background-position: -180px -155px;
+}
+@media (min-width: 550px) {
+  .footer_container {
+    flex-flow: row wrap;
+  }
+  .footer_inner {
+    flex-basis: 45.5%;
+  }
+  .copy-right_main {
+    flex-basis: 100%;
+  }
+
+  .foot_copy_right {
+    text-align: center;
+  }
+}
+@media (min-width: 800px) {
+  .footer_container {
+    flex-flow: row wrap;
+  }
+  .footer_inner {
+    flex-basis: 31.5%;
+  }
+}

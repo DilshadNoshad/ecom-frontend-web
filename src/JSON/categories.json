@@ -1,0 +1,84 @@
+{
+  "Categories": [
+    {
+      "id": 1,
+      "catName": "smartphones",
+      "catImg": "https://lzd-img-global.slatic.net/g/p/57d9ab603ed37e31f6a7b6dfcb5b1e12.jpg_80x80q80.jpg_.webp"
+    },
+    {
+      "id": 2,
+      "catName": "laptops",
+      "catImg": "https://lzd-img-global.slatic.net/g/p/86563e0b77d109e32c9a54b6fb231393.jpg_80x80q80.jpg_.webp"
+    },
+    {
+      "id": 3,
+      "catName": "fragrances",
+      "catImg": "https://lzd-img-global.slatic.net/g/p/d13fd652391626e41782e7cb4f8c08f4.jpg_200x200q75.jpg_.webp"
+    },
+    {
+      "id": 4,
+      "catName": "skincare",
+      "catImg": "https://lzd-img-global.slatic.net/g/p/3e0ced01f1d968c38b624efa37c4a92b.jpg_80x80q80.jpg_.webp"
+    },
+    {
+      "id": 5,
+      "catName": "groceries",
+      "catImg": "https://lzd-img-global.slatic.net/g/p/f12f681fc60e19c3d6088d7c3fdc4c63.jpg_200x200q75.jpg_.webp"
+    },
+    {
+      "id": 6,
+      "catName": "home-decoration",
+      "catImg": "https://lzd-img-global.slatic.net/g/p/5e564e07e7c699106865d7c928fd1cf2.jpg_200x200q75.jpg_.webp"
+    },
+    {
+      "id": 7,
+      "catName": "furniture",
+      "catImg": "https://lzd-img-global.slatic.net/g/p/29f650389724842c2ee61674c9ec1283.jpg_200x200q75.jpg_.webp"
+    },
+    {
+      "id": 8,
+      "catName": "tops",
+      "catImg": "https://lzd-img-global.slatic.net/g/p/dc5229569fbe50378fdae922896b6ff9.jpg_80x80q80.jpg_.webp"
+    },
+    {
+      "id": 9,
+      "catName": "womens-dresses",
+      "catImg": "https://lzd-img-global.slatic.net/g/p/2df984e597780d1fd09a65b528ed79aa.jpg_80x80q80.jpg_.webp"
+    },
+    {
+      "id": 10,
+      "catName": "womens-shoes",
+      "catImg": "https://lzd-img-global.slatic.net/g/p/b054c38ae4a5a34ad7b3d6bcb6bd90b0.jpg_200x200q75.jpg_.webp"
+    },
+    {
+      "id": 11,
+      "catName": "mens-shirts",
+      "catImg": "https://lzd-img-global.slatic.net/g/p/1dbb5385a60c02467e0be7d8e969ec6e.jpg_200x200q75.jpg_.webp"
+    },
+    {
+      "id": 12,
+      "catName": "mens-shoes",
+      "catImg": "https://lzd-img-global.slatic.net/g/p/4d10be0ba9ee78809b17dac918148c77.jpg_200x200q75.jpg_.webp"
+    },
+    {
+      "id": 13,
+      "catName": "mens-watches",
+      "catImg": "https://dummyjson.com/image/i/products/62/thumbnail.jpg"
+    },
+    {
+      "id": 14,
+      "catName": "womens-watches",
+      "catImg": "https://lzd-img-global.slatic.net/g/p/89d71835cf07072d5799e25d4a864b63.jpg_200x200q75.jpg_.webp"
+    },
+    {
+      "id": 15,
+      "catName": "womens-bags",
+      "catImg": "https://lzd-img-global.slatic.net/g/p/af6c04144d5e0c4087135e468deb9e37.jpg_200x200q75.jpg_.webp"
+    },
+    {
+      "id": 16,
+      "catName": "womens-jewellery",
+      "catImg": "https://lzd-img-global.slatic.net/g/p/bcce0e272e8db317b480d34688c92392.jpg_200x200q75.jpg_.webp"
+    }
+  ]
+}

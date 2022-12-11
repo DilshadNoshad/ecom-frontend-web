@@ -1,0 +1,14 @@
+.pd-mod-content_desc {
+  height: auto;
+  overflow-y: hidden;
+  padding: 10px 14px 10px 24px;
+  background-color: var(--clr-light);
+}
+
+.content_desc-maxheight {
+  max-height: 1005px;
+  overflow-y: scroll;
+}
+.content_desc-maxheight img {
+  max-width: 850px;
+}

@@ -1,0 +1,13 @@
+.row {
+  display: flex;
+  flex-flow: row nowrap;
+  margin-top: 10px;
+}
+
+.col4 {
+  flex-basis: 16.66666667%;
+  padding: 0 5px;
+}
+.col8 {
+  flex-basis: 83.33333333%;
+}

@@ -1,0 +1,7 @@
+.hero_slider {
+  position: relative;
+  margin: 0 auto;
+  max-width: 1400px;
+  background-color: var(--clr-gray);
+  overflow: hidden;
+}

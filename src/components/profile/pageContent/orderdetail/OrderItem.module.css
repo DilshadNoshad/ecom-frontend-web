@@ -1,0 +1,165 @@
+.ois_wrap {
+  padding: 12px 24px;
+  background-color: #fafafa;
+}
+
+.ois_seller_wrap {
+  display: flex;
+  align-items: center;
+  padding: 0 0 12px;
+  justify-content: space-between;
+}
+
+.vandor_detail {
+  display: flex;
+  align-items: center;
+  white-space: nowrap;
+}
+
+.vendor_icon,
+.shopinfo {
+  font-size: var(--normal-med-font);
+}
+.vendor_name {
+  max-width: 200px;
+  margin-left: 8px;
+  font-size: 14px;
+  font-weight: 600;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.vendor-button--primary {
+  display: block;
+  width: 60px;
+  background-color: var(--clr-primary);
+  color: var(--clr-light);
+  text-align: center;
+  font-size: var(--normal-xsm-font);
+  border-radius: 2px;
+  padding: 0.5rem;
+  transition: all 0.3s ease-in;
+}
+.vendor-button--primary ion-icon {
+  font-size: var(--normal-sm-font);
+  margin-right: 2px;
+}
+
+.vendor-button--primary:hover,
+.vendor-button--primary:active {
+  background-color: var(--clr-primary-hover);
+}
+
+.vendor_chat_link,
+.vendor_shop_link {
+  margin: 0 0 0 8px;
+}
+
+.vendor-button--secondary {
+  display: block;
+  width: 80px;
+  background-color: var(--clr-gray-light);
+  color: var(--clr-light);
+  text-align: center;
+  font-size: var(--normal-sm-font);
+  border-radius: 2px;
+  padding: 0.5rem;
+  transition: all 0.3s ease-in;
+  text-decoration: none;
+}
+
+.vendor-button--secondary:hover,
+.vendor-button--secondary:active {
+  background-color: var(--clr-gray-light-b);
+}
+
+.ois_bord_btm {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.09);
+}
+
+.ois_item a {
+  text-decoration: none;
+  display: flex;
+  word-wrap: break-word;
+  padding: 12px 0 0;
+  align-items: center;
+  flex-wrap: nowrap;
+  color: rgba(0, 0, 0, 0.87);
+}
+
+.ois_item_cont {
+  padding: 0 12px 0 0;
+  flex: 1;
+  align-items: flex-start;
+  flex-wrap: nowrap;
+  display: flex;
+  word-wrap: break-word;
+}
+
+.ois_item_image_wrapper {
+  width: 90px;
+  height: 90px;
+  border: 1px solid #e1e1e1;
+  background: #e1e1e1;
+}
+.ois_item_image_wrapper img {
+  height: 100%;
+  width: 100%;
+}
+
+.ois_item_cont_h {
+  min-width: 0;
+  padding: 0 0 0 12px;
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  align-items: flex-start;
+  word-wrap: break-word;
+}
+
+.ois_item_title {
+  overflow: hidden;
+  display: -webkit-box;
+  text-overflow: ellipsis;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  margin: 0 0 5px;
+  font-size: 16px;
+  line-height: 22px;
+  max-height: 48px;
+  word-wrap: break-word;
+}
+.ois_item_title span {
+  vertical-align: middle;
+}
+
+.ois_item_var {
+  color: rgba(0, 0, 0, 0.54);
+  margin: 0 0 5px;
+  font-size: var(--normal-sm-font);
+}
+
+.ois_item_qty {
+  margin: 0 0 5px;
+}
+.ois_item_price {
+  vertical-align: middle;
+  font-size: 14px;
+  line-height: 16px;
+  color: rgba(0, 0, 0, 0.87);
+}
+
+.ois_item_disprice {
+  margin: 0 4px 0 0;
+  -webkit-text-decoration-line: line-through;
+  text-decoration-line: line-through;
+  color: #000;
+  opacity: 0.26;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.ois_item_curprice {
+  font-size: var(--normal-med-font);
+  color: var(--clr-primary);
+}

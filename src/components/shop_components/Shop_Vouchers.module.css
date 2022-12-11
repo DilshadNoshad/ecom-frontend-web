@@ -1,0 +1,220 @@
+.vouchers {
+  background-color: #fff;
+  padding: 1.25rem 2.75rem;
+}
+.vouchers-title {
+  font-size: var(--normal-med-font);
+  font-weight: 500;
+  text-transform: uppercase;
+  margin-top: 0;
+  margin-bottom: 0.625rem;
+}
+
+.voucher {
+  padding-bottom: 8px;
+  padding-top: 0.3125rem;
+  height: 12.75rem;
+  /* width: 28.5714rem; */
+}
+
+.voucher_wrap {
+  box-shadow: 0.125rem 0.125rem 0.3125rem rgb(0 0 0 / 7%);
+  position: relative;
+  display: flex;
+  width: 100%;
+  height: 100%;
+  border-radius: 0.125rem;
+  /* overflow: hidden; */
+}
+
+.voucher_style {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 0.3125rem;
+  /* margin-left: 1px; */
+  border-radius: 0.1875rem 0 0 0.1875rem;
+  border-top: 1px solid #fbc9c0;
+  border-bottom: 1px solid #fbc9c0;
+}
+
+.vs_wraX {
+  top: 0;
+  left: 0;
+  position: absolute;
+  height: 100%;
+  width: 0.3125rem;
+}
+
+.vs_wraXDh {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0.25rem;
+  height: 100%;
+  background: radial-gradient(
+    circle at 0 0.375rem,
+    transparent 0,
+    rgba(0, 0, 0, 0.03) 0.1875rem,
+    #f8d0d3 0,
+    #f8d0d3 0.25rem,
+    #fff4f4 0
+  );
+  background-size: 0.25rem 0.625rem;
+  background-repeat: repeat-y;
+}
+
+.vs_wraX0J {
+  top: 0;
+  left: 0;
+  position: absolute;
+  height: 100%;
+  width: 1px;
+  background: repeating-linear-gradient(
+    #f8d0d3,
+    #f8d0d3 0.1875rem,
+    transparent 0,
+    transparent 0.625rem
+  );
+  background-size: 1px 0.625rem;
+}
+
+.voucher_content {
+  position: relative;
+
+  min-width: 0;
+
+  border-radius: 0 0.125rem 0.125rem 0;
+
+  background: #fff4f4;
+  border: 1px solid #f8d0d3;
+  border-left: 0 solid transparent;
+
+  align-items: center;
+  justify-content: center;
+
+  display: flex;
+  padding: 0 0 0 0.8rem;
+  flex: 1;
+  width: 60%;
+}
+
+.voucher_details {
+  display: flex;
+  justify-content: center;
+  flex: 1;
+  height: 100%;
+  min-width: 0;
+}
+
+.voucher_details_con {
+  display: flex;
+  justify-content: center;
+  flex: 1;
+  flex-direction: column;
+  position: relative;
+  max-width: 100%;
+  padding-right: 0.1875rem;
+}
+
+.voucher_claim {
+  display: flex;
+  height: 100%;
+  align-items: center;
+}
+
+.voucher_offer {
+  color: #d0011b;
+  padding-right: 0.5rem;
+}
+
+.voucher_offer_off {
+  display: flex;
+}
+
+.voucher_offer_off_per {
+  font-size: var(--normal-med-font);
+  line-height: 2.75rem;
+  font-weight: 700;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.voucher_offer_det {
+  font-size: var(--normal-sm-font);
+  line-height: 2rem;
+  overflow: hidden;
+  display: -webkit-box;
+  text-overflow: ellipsis;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+}
+
+.voucher_offer_est {
+  color: rgba(0, 0, 0, 0.54);
+  margin-top: 0.25rem;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+  display: flex;
+  align-items: center;
+  font-size: var(--normal-xsm-font);
+  line-height: 0.75rem;
+}
+.voucher_offer_est span {
+  margin-left: 0.25rem;
+}
+.seprator {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 1px;
+  height: 100%;
+  background: repeating-linear-gradient(
+    #e8e8e8,
+    #e8e8e8 0.35rem,
+    transparent 0,
+    transparent 0.25rem
+  );
+  background: repeating-linear-gradient(
+    #e8e8e8,
+    #e8e8e8 0.35rem,
+    transparent 0 0.5rem
+  );
+  background-size: 1px 0.5rem;
+  background-repeat: repeat-y;
+}
+
+.claim-btn {
+  cursor: pointer;
+  text-overflow: ellipsis;
+  -webkit-line-clamp: 1;
+  font-size: var(--normal-sm-font);
+  box-shadow: 0 1px 1px 0 rgb(0 0 0 / 9%);
+  border-radius: 2px;
+  border: 0;
+  min-width: 70px;
+  max-width: 180px;
+  color: #fff;
+  margin: 0 0.75rem;
+  outline: 0;
+  background: #d0011b;
+  height: 2.8rem;
+  padding: 0 1.5rem;
+  width: 70px;
+  white-space: nowrap;
+}
+
+.voucherslist {
+  list-style-type: none;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.vouchersitem {
+  padding: 0px 8px;
+  width: 34.5714%;
+}

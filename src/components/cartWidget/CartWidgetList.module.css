@@ -1,0 +1,9 @@
+.cart-Widget-items {
+  overflow-x: hidden;
+  overflow-y: visible;
+  max-height: calc(var(--cw-widget) - 100px);
+}
+.cart-Widget-items li {
+  border-bottom: 1px solid var(--clr-gray-light);
+  margin: 0.5rem;
+}

@@ -1,0 +1,20 @@
+.product-price {
+  padding: 16px 0 17px;
+  border-bottom: 1px solid var(--clr-gray-light);
+}
+
+.pdp-price {
+  color: var(--clr-primary);
+  font-size: var(--normal-xl-font);
+}
+
+.origin-block .pdp-price-deleted {
+  text-decoration: line-through;
+  font-size: var(--normal-sm-font);
+  color: var(--clr-gray-light);
+}
+.origin-block .pdp_discount {
+  font-size: 14px;
+  color: var(--clr-secondary);
+  margin-left: 6px;
+}
