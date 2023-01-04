@@ -1,7 +1,7 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
 import classes from "./InfoBar.module.css";
-const InfoBar = () => {
+const InfoBar = (props) => {
   const navigate = useNavigate();
   const previousBtnHandler = () => {
     navigate(-1);
@@ -13,7 +13,7 @@ const InfoBar = () => {
         <span>BACK</span>
       </div>
       <div>
-        <span>ORDER ID. 2211059HAT1XK2</span>
+        <span>ORDER . {props.orderNumber}</span>
         <span className={classes.sep}>|</span>
         <span className={classes.orderstatus}>order completed</span>
       </div>

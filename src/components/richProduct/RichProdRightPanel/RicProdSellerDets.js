@@ -33,7 +33,12 @@ const RicProdSellerDets = () => {
         </div>
       </div>
       <div className={classes["seller-link"]}>
-        <Link to="#" className="delivery-detail-link" target="_self" href>
+        <Link
+          to="/shop-collection/1"
+          className="delivery-detail-link"
+          target="_self"
+          href
+        >
           GO TO STORE
         </Link>
       </div>

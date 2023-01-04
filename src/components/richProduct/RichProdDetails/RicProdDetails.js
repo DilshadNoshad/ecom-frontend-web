@@ -7,15 +7,18 @@ import RicProdPricing from "./RicProdPricing";
 import RicProdVariants from "./RicProdVariants";
 const RicProdDetails = (props) => {
   const {
-    id: richProdId,
+    productId: richProdId,
     title: richProdTitle,
-    rating: richProdRating,
+    productRating: richProdRating,
     thumbnail: richProdThumbnail,
     price: richProdPrice,
-    discountPercentage: richProdDcPer,
-    price: richProdDelPrice,
+    discAmntValPerc: richProdDcPer,
+    old_price: richProdDelPrice,
     brand: richProdBrand,
-    images: richProdImages,
+    deliveryCost: richProdDeliCost,
+    deliveryTax: richProdDeliTax,
+    deliveryCharges: richProdDeliChar,
+    mediaList: richProdImages,
   } = props.productData;
 
   return (
@@ -24,6 +27,7 @@ const RicProdDetails = (props) => {
         productTitle={richProdTitle}
         productRating={richProdRating}
         productBrand={richProdBrand}
+        productDeliverycharges={richProdDeliChar}
       />
       <RicProdPricing
         productPrice={richProdPrice}
@@ -37,6 +41,9 @@ const RicProdDetails = (props) => {
           productId={richProdId}
           productTitle={richProdTitle}
           productPrice={richProdPrice}
+          productDeliverycost={richProdDeliCost}
+          productDeliverytax={richProdDeliTax}
+          productDeliverycharges={richProdDeliChar}
           productThumbnail={richProdThumbnail}
         />
       </div>

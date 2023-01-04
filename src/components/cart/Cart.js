@@ -41,7 +41,7 @@ const Cart = () => {
   const checkoutTotalItems = totalCheckoutItems(checkoutItems);
 
   const { sendRequest, status, data: cartData, error } = useHttp(addCart);
-  console.log(cartItems);
+  // console.log(cartItems);
   // const [cartItem, setCartItem] = useState(cartItems);
 
   useEffect(() => {
@@ -224,8 +224,8 @@ const Cart = () => {
                       title: item.productName,
                       thumbnail: item.productImgUrl,
                       quantity: item.productQty,
-                      total: item.totalPrice,
-                      price: item.productFinalPriceWithTax,
+                      // total: item.totalPrice,
+                      price: item.product_original_price,
                     }}
                   />
                   // : null

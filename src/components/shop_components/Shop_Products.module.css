@@ -1,0 +1,11 @@
+.shop-products {
+  display: flex;
+  flex-flow: row nowrap;
+  margin: 1.875rem 0 5rem;
+}
+
+.shop-products-list {
+  min-width: 0;
+  flex: 1 1;
+  background-color: var(--clr-gray);
+}

@@ -8,19 +8,6 @@ import useHttp from "../../../hooks/use-http";
 import { getUserOrderList } from "../../../Services/auth";
 import AuthContext from "../../../Store/auth-context";
 
-const myCancleOrders = [
-  {
-    id: 1,
-    title:
-      "Keychain - Mustache Keychain Best Quality Mustache Keychain Key Ring Beard Key",
-    thumbnail:
-      "https://static-01.daraz.pk/p/28e40033fd82db1feeecf50c77c639fe.jpg",
-    quantity: 1,
-    orderStatus: "Cancelled",
-    orderNumber: 177623476949385,
-    requestedDate: "17 Aug 2022",
-  },
-];
 const MyOrders = () => {
   const navigate = useNavigate();
   const [toggleState, setToggleState] = useState(1);
@@ -37,7 +24,7 @@ const MyOrders = () => {
     sendRequest({ id: authCtx?.userData?.id });
     if (status === "completed" && !error) {
       setOrderList(orders);
-      console.log(orderList);
+      // console.log(orderList);
     }
   }, [status, error]);
 
@@ -111,15 +98,13 @@ const MyOrders = () => {
                     order={{
                       title: od.productName,
                       thumbnail:
-                        od.productImgUrl === null ||
-                        od.productImgUrl === undefined ||
-                        od.productImgUrl === ""
+                        od.productImgUrl == null || od.productImgUrl === ""
                           ? "https://southwesttrainingsolutions.co.uk/wp-content/uploads/2020/07/no-image.png"
                           : od.productImgUrl,
                       quantity: od.productQty,
                       orderStatus: order.orderStatus,
                       orderNumber: order.orderNumber,
-                      requestedDate: order.shipmentDate,
+                      requestedDate: order.orderDate,
                       link: `order_detail/${od.orderDetailId}`,
                     }}
                   />

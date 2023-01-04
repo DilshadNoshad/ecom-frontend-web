@@ -2,51 +2,53 @@ import { createSlice } from "@reduxjs/toolkit";
 
 const cartSlice = createSlice({
   name: "cart",
-  initialState: { items: [], totalAmount: 0 },
+  initialState: { items: [], totalAmount: 0, changed: false },
   reducers: {
     addItemToCart(state, action) {
-      const newItem = action.payload;
-      state.totalAmount =
-        state.totalAmount +
-        newItem.productFinalPriceWithTax * newItem.productQty;
-      const existingItem = state.items.find(
-        (item) => item.cartDetailId === newItem.cartDetailId
-      );
-
-      if (!existingItem) {
-        // newItem.totalPrice = newItem.quantity * newItem.price;
-        state.items.push(newItem);
-      } else {
-        existingItem.totalPrice =
-          existingItem.totalPrice +
-          newItem.productFinalPriceWithTax * newItem.productQty;
-        existingItem.quantity = existingItem.quantity + newItem.quantity;
-      }
+      state.changed = true;
+      // const newItem = action.payload;
+      // state.totalAmount =
+      //   state.totalAmount +
+      //   newItem.productFinalPriceWithTax * newItem.productQty;
+      // const existingItem = state.items.find(
+      //   (item) => item.cartDetailId === newItem.cartDetailId
+      // );
+      // if (!existingItem) {
+      //   // newItem.totalPrice = newItem.quantity * newItem.price;
+      //   state.items.push(newItem);
+      // } else {
+      //   existingItem.totalPrice =
+      //     existingItem.totalPrice +
+      //     newItem.productFinalPriceWithTax * newItem.productQty;
+      //   existingItem.quantity = existingItem.quantity + newItem.quantity;
+      // }
     },
     addSingleItemToCart(state, action) {
-      const newItem = action.payload;
-      const existingItem = state.items.find(
-        (item) => item.cartDetailId === newItem.cartDetailId
-      );
-      if (existingItem) {
-        state.totalAmount = state.totalAmount + newItem.price;
-        existingItem.totalPrice = existingItem.totalPrice + newItem.price;
-        existingItem.productQty = existingItem.productQty + 1;
-      }
+      state.changed = true;
+      // const newItem = action.payload;
+      // const existingItem = state.items.find(
+      //   (item) => item.cartDetailId === newItem.cartDetailId
+      // );
+      // if (existingItem) {
+      //   state.totalAmount = state.totalAmount + newItem.price;
+      //   existingItem.totalPrice = existingItem.totalPrice + newItem.price;
+      //   existingItem.productQty = existingItem.productQty + 1;
+      // }
     },
     removeItemFromCart(state, action) {
-      const id = action.payload;
-      const existingItem = state.items.find((item) => item.cartDetailId === id);
+      state.changed = true;
+      // const id = action.payload;
+      // const existingItem = state.items.find((item) => item.cartDetailId === id);
 
-      state.totalAmount = state.totalAmount - existingItem.price;
+      // state.totalAmount = state.totalAmount - existingItem.price;
 
-      if (existingItem.productQty === 1) {
-        state.items = state.items.filter((item) => item.cartDetailId !== id);
-      } else {
-        existingItem.productQty = existingItem.productQty - 1;
-        existingItem.totalPrice =
-          existingItem.totalPrice - existingItem.productFinalPriceWithTax;
-      }
+      // if (existingItem.productQty === 1) {
+      //   state.items = state.items.filter((item) => item.cartDetailId !== id);
+      // } else {
+      //   existingItem.productQty = existingItem.productQty - 1;
+      //   existingItem.totalPrice =
+      //     existingItem.totalPrice - existingItem.productFinalPriceWithTax;
+      // }
     },
     deleteItemFromCart(state, action) {
       const id = action.payload;
@@ -65,6 +67,7 @@ const cartSlice = createSlice({
     },
     replaceCart(state, action) {
       state.items = action.payload.items;
+      state.changed = false;
       // state.totalQuantity = action.payload.totalQuantity;
     },
   },

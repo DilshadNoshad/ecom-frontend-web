@@ -14,6 +14,10 @@
   object-fit: contain;
   object-position: center;
 }
+.product_preview > video {
+  height: 100%;
+  width: 100%;
+}
 .product_preview div + div {
   z-index: 1;
 }

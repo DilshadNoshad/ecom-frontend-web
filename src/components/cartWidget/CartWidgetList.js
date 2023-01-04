@@ -12,7 +12,7 @@ const CartWidgetList = (props) => {
             title: item.productName,
             thumbnail: item.productImgUrl,
             quantity: item.productQty,
-            price: item.productFinalPriceWithTax,
+            price: item.product_original_price,
           }}
         />
       ))}

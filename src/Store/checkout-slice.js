@@ -9,11 +9,15 @@ const checkoutSlice = createSlice({
       // replace array with a new array
       state.checkoutItems.splice(0, state.checkoutItems.length, ...cartItems);
 
+      // state.checkoutTotalAmount = state.checkoutItems.reduce(
+      //   (curValue, nextValue) => {
+      //     return curValue + nextValue.productQty * nextValue.productCost;
+      //   },
+      //   0
+      // );
       state.checkoutTotalAmount = state.checkoutItems.reduce(
         (curValue, nextValue) => {
-          return (
-            curValue + nextValue.productQty * nextValue.productFinalPriceWithTax
-          );
+          return curValue + nextValue.productCost;
         },
         0
       );
@@ -21,8 +25,7 @@ const checkoutSlice = createSlice({
     addItemToCheckout(state, action) {
       const newItem = action.payload;
 
-      state.checkoutTotalAmount =
-        newItem.productFinalPriceWithTax * newItem.productQty;
+      state.checkoutTotalAmount = newItem.productCost * newItem.productQty;
 
       // const existingItem = state.checkoutItems.find(
       //   (item) => item.id === newItem.id

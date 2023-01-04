@@ -11,7 +11,7 @@ function Shope_Info() {
               className={classes["shop-background"]}
               style={{
                 background:
-                  "linear-gradient(rgba(0,0,0,.5),rgba(0,0,0,.6)),url(https://cf.shopee.com.my/file/b7a9cb4585eeb95e1e46b2b9af4e51a5_tn) no-repeat center /cover",
+                  "linear-gradient(rgba(0,0,0,.5),rgba(0,0,0,.6)),url(https://cf.shopee.com.my/file/b1b1f2d6633a40973ec6a92131758559_tn) no-repeat center /cover",
               }}
             ></div>
             <div className={classes["about-shop-warp"]}>

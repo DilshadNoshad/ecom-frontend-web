@@ -13,8 +13,10 @@ const Product = (props) => {
           alt=""
         />
         <ProductDetails
+
           prodTitle={props.prodTitle}
           prodPrice={props.prodPrice}
+          prodOldPrice={props.prodOldPrice}
           prodDiscountPct={props.prodDiscountPct}
           prodRating={props.prodRating}
         />

@@ -33,27 +33,33 @@ const RichProductDetails = () => {
     content = (
       <Fragment>
         <BreadCrumbs
-          productCat={productDetailData.category}
+          productCat={productDetailData.categoryName}
           productTitle={productDetailData.title}
         />
         <div id={classes.product}>
           <section>
             <div className={classes["product_wrapper"]}>
               <RicProdImgView
-                productImg={productDetailData.images[previewImg]}
+                productImgType={
+                  productDetailData.mediaList[previewImg].media_type
+                }
+                productImg={productDetailData.mediaList[previewImg].filename}
               />
               <RicProdDetails productData={productDetailData} />
-              <RicProdDlvrDetsWrap />
+              <RicProdDlvrDetsWrap
+                productDeliveryDays={productDetailData.deliveryDays}
+                productDeliveryCharges={productDetailData.deliveryCharges}
+              />
             </div>
           </section>
 
           <RichProdDescr
             title={productDetailData.title}
-            description={JSONData.description_html2}
+            description={productDetailData.description}
           />
           <RichProdRaRev
             title={productDetailData.title}
-            rating={productDetailData.rating}
+            rating={productDetailData.productRating}
           />
         </div>
       </Fragment>

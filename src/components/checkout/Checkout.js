@@ -37,6 +37,15 @@ const Checkout = (props) => {
     }
   }, [status, error, orderData]);
 
+  const orderProducts = () => {
+    return checkoutItems.map((item) => ({
+      productId: item.productId,
+      shippingCost: 5,
+      shippingTax: 0,
+      shippingTtl: 10,
+      productQty: item.productQty,
+    }));
+  };
   const checkoutOrderButton = (event) => {
     event.preventDefault();
 
@@ -44,14 +53,14 @@ const Checkout = (props) => {
       description: "2nd desc",
       orderDate: "2022-10-06",
       userId: 30,
-      orderStatus: "1",
+      orderStatus: "delivered",
       orderNumber: "382302",
       shipmentDate: "2022-10-06",
       userName: "test30",
       userEmail: "test30@test.com",
       userPhone: "39023902",
-      userCity: "",
-      userAdd: "",
+      userCity: "khi",
+      userAdd: "khi",
       userCo: "co",
       userFName: "muhammad",
       userMName: "Arsalan",
@@ -59,41 +68,8 @@ const Checkout = (props) => {
       userMobile: "3902930",
       currency: "pkr",
       shippingMode: "pay by cash",
-      shippingCost: 10.0,
-      shippingTax: 2.0,
-      shippingTtl: 12.0,
-      orderPrice: 90.0,
-      orderCost: 100.0,
-      orderTax: 5.0,
-      orderFinalPriceWithTax: 120.0,
-      orderFinalPriceWithoutTax: 10.0,
-      otherTax: 0.0,
       customerId: 1,
-      orderDetails: [
-        {
-          createdBy: "Arsalan",
-          creationDate: 1668827812000,
-          lastModifiedBy: "Arsalan",
-          lastModifiedDate: 1668827812000,
-          productId: 1,
-          productName: "Detole Soup",
-          productDesc: "Detole Soup desc",
-          shippingCost: 5.0,
-          shippingTax: 0.0,
-          shippingTtl: 10.0,
-          productPrice: 90.0,
-          productCost: 70.0,
-          productTax: 5.0,
-          productFinalPriceWithTax: 120.0,
-          productFinalPriceWithoutTax: 100.0,
-          productOtherTax: 0.0,
-          productQty: 1,
-          vendorId: null,
-          vendorName: null,
-          orderDetailStatus: 1,
-          productImgUrl: "http://google.com",
-        },
-      ],
+      orderDetails: orderProducts(),
     });
 
     navigate("/checkout/success_checkout");
@@ -108,16 +84,15 @@ const Checkout = (props) => {
             <SelectedAddress />
             {checkoutItems.map((item, index) => (
               <CheckoutItems
-                key={item.id}
+                key={item.productId}
                 item={{
                   index: index,
                   totalPakages: totalPkg,
-                  id: item.id,
-                  title: item.name,
-                  thumbnail: item.thumbnail,
-                  quantity: item.quantity,
-                  total: item.totalPrice,
-                  price: item.price,
+                  id: item.productId,
+                  title: item.productName,
+                  thumbnail: item.productImgUrl,
+                  quantity: item.productQty,
+                  price: item.product_original_price,
                 }}
               />
             ))}

@@ -12,14 +12,13 @@ const PurchaseSuccessList = (props) => {
     <article className={classes["delivery_dates-table"]}>
       {props.orderedItems.map((item) => (
         <PurchaseSuccessItems
-          key={item.id}
+          key={item.productId}
           item={{
-            id: item.id,
-            title: item.name,
-            thumbnail: item.thumbnail,
-            quantity: item.quantity,
-            total: item.totalPrice,
-            price: item.price,
+            id: item.productId,
+            title: item.productName,
+            thumbnail: item.productImgUrl,
+            quantity: item.productQty,
+            price: item.productPrice,
           }}
         />
       ))}

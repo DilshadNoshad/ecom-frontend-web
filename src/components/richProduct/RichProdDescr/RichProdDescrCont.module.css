@@ -8,7 +8,12 @@
 .content_desc-maxheight {
   max-height: 1005px;
   overflow-y: scroll;
+  overflow-x: hidden;
 }
-.content_desc-maxheight img {
-  max-width: 850px;
+.content_desc-maxheight > * {
+  max-width: 850px !important;
+  width: auto !important;
+
 }
+
+

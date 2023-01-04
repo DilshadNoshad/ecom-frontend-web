@@ -54,7 +54,7 @@ export async function addCart(cartData) {
 export async function addOrder(orderData) {
   //const URL = "http://localhost:8080/api/users";
   //const URL = `${JAVA_SVC}/users`
-  const URL = `${JAVA_SVC}/carts`;
+  const URL = `${JAVA_SVC}/orders`;
   //console.log(URL);
   //console.log(userData);
 

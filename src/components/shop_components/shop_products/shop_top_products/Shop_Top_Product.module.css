@@ -32,20 +32,20 @@
 }
 @media (min-width: 768px) {
   .row_cointainer {
-    grid-template-columns: repeat(5, minmax(100px, 1fr));
-    gap: 0 1%;
+    grid-template-columns: repeat(4, minmax(100px, 1fr));
+    gap: 0 3%;
   }
 }
-/* @media (min-width: 992px) {
+@media (min-width: 992px) {
   .row_cointainer {
     grid-template-columns: repeat(5, minmax(100px, 1fr));
     gap: 0 2%;
   }
-} */
-/* 
+}
+
 @media (min-width: 1200px) {
   .row_cointainer {
     grid-template-columns: repeat(6, minmax(100px, 1fr));
     gap: 0 1%;
   }
-} */
+}

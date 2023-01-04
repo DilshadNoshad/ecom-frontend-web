@@ -2,7 +2,7 @@
   display: grid;
   grid-template-columns: repeat(2, minmax(100px, 1fr));
   grid-template-rows: auto;
-  margin-top: 5px;
+  margin-top: 12px;
   gap: 0 4%;
 }
 
@@ -37,15 +37,15 @@
   }
 }
 /* @media (min-width: 992px) {
-  .row_cointainer {
-    grid-template-columns: repeat(5, minmax(100px, 1fr));
-    gap: 0 2%;
-  }
-} */
+    .row_cointainer {
+      grid-template-columns: repeat(5, minmax(100px, 1fr));
+      gap: 0 2%;
+    }
+  } */
 /* 
-@media (min-width: 1200px) {
-  .row_cointainer {
-    grid-template-columns: repeat(6, minmax(100px, 1fr));
-    gap: 0 1%;
-  }
-} */
+  @media (min-width: 1200px) {
+    .row_cointainer {
+      grid-template-columns: repeat(6, minmax(100px, 1fr));
+      gap: 0 1%;
+    }
+  } */

@@ -27,9 +27,11 @@ const RicProdHead = (props) => {
         <Link to="#" className={classes["product-brand_suggestion-link"]}>
           More Nursery from No Brand
         </Link>
-        <span className={classes["product-brand_dev-label"]}>
-          Free Shipping
-        </span>
+        {props.productDeliverycharges <= 0 && (
+          <span className={classes["product-brand_dev-label"]}>
+            Free Shipping
+          </span>
+        )}
       </div>
     </Fragment>
   );

@@ -1,7 +1,7 @@
 import { API } from "../config";
 
 export async function getProductDetail(productId) {
-  const response = await fetch(`${API}/products/${productId}`);
+  const response = await fetch(`http://localhost:9090/api/products/${productId}`);
   const data = await response.json();
 
   if (!response.ok) {

@@ -11,14 +11,14 @@ export async function getAllProducts() {
   return data.products;
 }
 export async function getAllFlashProducts() {
-  const response = await fetch(`${API}/products?limit=6&skip=10`);
+  const response = await fetch(`http://localhost:9090/api/products`);
   const data = await response.json();
 
   if (!response.ok) {
     throw new Error(data.message || "Could not fetch products.");
   }
 
-  return data.products;
+  return data;
 }
 export async function getAllMostPopularProducts() {
   const response = await fetch(`${API}/products?limit=9&skip=9`);

@@ -23,13 +23,33 @@ import MyOrderPage from "./pages/customer/MyOrderPage";
 import EditProfile from "./components/profile/pageContent/EditProfile";
 import MyOrderDetailPage from "./pages/customer/MyOrderDetailPage";
 import { fetchCartData } from "./Store/cart-actions";
-import MyShop from "./pages/shop/MyShop";
+
+import Shop_Products from "./components/shop_components/shop_products/Shop_All_Products";
+import Shop_All_Products from "./components/shop_components/shop_products/Shop_All_Products";
+import Shop_Cat_Products from "./components/shop_components/shop_products/Shop_Cat_Products";
+import MyShop from "./components/shop_components/Shop_Products";
+import ShopPage from "./pages/shop/ShopPage";
 
 function App() {
+  const isCartChange = useSelector((state) => state.cart.changed);
   const dispatch = useDispatch();
+  // useEffect(() => {
+  //   dispatch(fetchCartData());
+  // }, [dispatch]);
+
   useEffect(() => {
+    // if (initialState) {
+    //   initialState = false;
+    //   return;
+    // }
+
+    // if (isCartChange) {
+    // console.log(isCartChange)
     dispatch(fetchCartData());
-  }, [dispatch]);
+    // } else {
+    dispatch(fetchCartData());
+    // }
+  }, [isCartChange, dispatch]);
   const checkoutItems = useSelector((state) => state.checkout.checkoutItems);
   const authCtx = useContext(AuthContext);
   const isLoggedIn = authCtx.isLoggedIn;
@@ -39,7 +59,12 @@ function App() {
     <Layout>
       <Routes>
         <Route path="/" element={<LandingPage />} />
-        <Route path="/shopCollection/:shopNumber" element={<MyShop />} />
+        <Route path="/shop-collection/:shopNumber" element={<ShopPage />}>
+          <Route index element={<Shop_All_Products />} />
+          <Route path="category/:categoryName">
+            <Route index element={<Shop_Cat_Products />} />
+          </Route>
+        </Route>
         {!isLoggedIn && <Route path="/login" element={<LoginPage />} />}
         <Route path="/login">
           <Route

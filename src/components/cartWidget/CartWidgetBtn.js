@@ -7,7 +7,7 @@ const CartWidgetBtn = (props) => {
   const location = useLocation();
   const isCartPage = location.pathname === "/cart";
   const cartWidTotal = useSelector((state) => state.cart.totalAmount);
-  console.log(cartWidTotal, "----");
+
   let cartWidgetButton;
 
   if (!isCartPage && props.hasItemsInCartWd) {

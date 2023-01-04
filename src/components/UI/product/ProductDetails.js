@@ -17,7 +17,7 @@ const ProductDetails = (props) => {
         <div className="card-price-second-line">
           <span className={classes["card-price-text"]}>
             <span className="currency">{Currency}</span>
-            <span className="price">15.00</span>
+            <span className="price">{props.prodOldPrice}</span>
           </span>
           <span className={classes["card-discount"]}>{discountPercentage}</span>
         </div>

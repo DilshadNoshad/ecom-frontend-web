@@ -50,7 +50,7 @@ const RicProdVariants = (props) => {
                   }
                   ref={refSelectedImgHandler}
                 >
-                  <img src={prodImgs} alt="" />
+                  <img src={prodImgs.filename} alt="" />
                 </div>
               </span>
             ))}

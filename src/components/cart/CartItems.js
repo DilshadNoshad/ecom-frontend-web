@@ -1,32 +1,70 @@
 import React, { useEffect, useState } from "react";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { Link } from "react-router-dom";
 import { Currency } from "../../config";
 import useHttp from "../../hooks/use-http";
 import { deleteCartItems } from "../../Services/cartService";
+import { sendUpdateCartData } from "../../Store/cart-actions";
 import { cartAction } from "../../Store/cart-slice";
 import QuantityController from "../UI/quantityController/QuantityController";
 import classes from "./CartItems.module.css";
 const CartItems = (props) => {
+  const cartItems = useSelector((state) => state.cart.items);
   const dispatch = useDispatch();
   const { sendRequest, status, error } = useHttp(deleteCartItems, true);
   const { title, quantity, price, id, cartDetailId, thumbnail } = props.item;
   // const [quantityValue, setQuantityValue] = useState(quantity);
   const addItemQuantityHandler = () => {
-    dispatch(
-      cartAction.addSingleItemToCart({
-        cartDetailId,
-        title,
-        price,
-        quantity,
-      })
-    );
+    dispatch(cartAction.addSingleItemToCart(cartDetailId));
+    const existingItem = cartItems.find((item) => item.productId === id);
+    if (existingItem) {
+      // cartItems = cartItems.filter((item) => item.productId !== id);
+      dispatch(
+        sendUpdateCartData({
+          cartDetailId: existingItem.cartDetailId,
+          productId: existingItem.productId,
+          productQty: existingItem.productQty + 1,
+          cartDetailStatus: 1,
+          estatusId: 1,
+          version: 1,
+          cartId: 15,
+        })
+      );
+    }
+
+    // dispatch(
+    //   cartAction.addSingleItemToCart({
+    //     cartDetailId,
+    //     title,
+    //     price,
+    //     quantity,
+    //   })
+    // );
   };
   const removeItemQuantityHandler = () => {
     dispatch(cartAction.removeItemFromCart(cartDetailId));
+    const existingItem = cartItems.find((item) => item.productId === id);
+    if (existingItem.productQty === 1) {
+      // cartItems = cartItems.filter((item) => item.productId !== id);
+    } else {
+      dispatch(
+        sendUpdateCartData({
+          cartDetailId: existingItem.cartDetailId,
+          productId: existingItem.productId,
+          productQty: existingItem.productQty - 1,
+          cartDetailStatus: 1,
+          estatusId: 1,
+          version: 1,
+          cartId: 15,
+        })
+      );
+      // existingItem.productQty = existingItem.productQty - 1;
+      // existingItem.totalPrice =
+      //   existingItem.totalPrice - existingItem.productFinalPriceWithTax;
+    }
   };
   const deleteItemHandler = () => {
-    dispatch(cartAction.deleteItemFromCart(cartDetailId));
+    // dispatch(cartAction.deleteItemFromCart(cartDetailId));
     sendRequest(cartDetailId);
   };
 

@@ -7,13 +7,14 @@ const FlashSaleBody = (props) => {
       {props.fetchData.map((product) => {
         return (
           <Product
-            key={product.id}
-            prodId={product.id}
+            key={product.productId}
+            prodId={product.productId}
             prodThumbnail={product.thumbnail}
             prodTitle={product.title}
             prodPrice={product.price}
-            prodDiscountPct={product.discountPercentage}
-            prodRating={product.rating}
+            prodOldPrice={product.old_price}
+            prodDiscountPct={product.discAmntValPerc}
+            prodRating={product.productRating}
           />
         );
       })}

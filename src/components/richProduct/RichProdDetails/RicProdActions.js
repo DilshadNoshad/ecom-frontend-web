@@ -1,5 +1,5 @@
 import React, { useContext, useRef, useState } from "react";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import QuantityController from "../../UI/quantityController/QuantityController";
 import RicProdQuantity from "./RicProdQuantity";
 import { cartAction } from "../../../Store/cart-slice";
@@ -9,8 +9,9 @@ import { checkoutAction } from "../../../Store/checkout-slice";
 import { useNavigate } from "react-router-dom";
 import AuthContext from "../../../Store/auth-context";
 import { uiActions } from "../../../Store/ui-slice";
-import { sendCartData } from "../../../Store/cart-actions";
+import { sendCartData, sendUpdateCartData } from "../../../Store/cart-actions";
 const RicProdActions = (props) => {
+  const cartItems = useSelector((state) => state.cart.items);
   const [quantityValue, setQuantityValue] = useState(1);
   const authCtx = useContext(AuthContext);
   const isLoggedIn = authCtx.isLoggedIn;
@@ -60,29 +61,36 @@ const RicProdActions = (props) => {
       })
     );
 
-    console.log(props.productPrice * +enteredAmount);
-    // dispatch(
-    //   sendCartData({
-    //     productId: props.productId,
-    //     productName: props.productTitle,
-    //     productDesc: "test",
-    //     shippingCost: 5,
-    //     shippingTax: 0,
-    //     shippingTtl: 10,
-    //     productPrice: 90,
-    //     productCost: 70,
-    //     productTax: 5,
-    //     productFinalPriceWithTax: props.productPrice,
-    //     productFinalPriceWithoutTax: 100,
-    //     productOtherTax: 0,
-    //     productQty: +enteredAmount,
-    //     vendorId: null,
-    //     vendorName: null,
-    //     cartDetailStatus: 1,
-    //     cartId: 4,
-    //     productImgUrl: props.productThumbnail,
-    //   })
-    // );
+    const existingItem = cartItems.find(
+      (item) => item.productId === props.productId
+    );
+
+    if (!existingItem) {
+      // newItem.totalPrice = newItem.quantity * newItem.price;
+      dispatch(
+        sendCartData({
+          cartId: 1,
+          productId: props.productId,
+          productQty: +enteredAmount,
+          vendorId: 1,
+          vendorName: null,
+          cartDetailStatus: 1,
+          estatusId: 1,
+        })
+      );
+    } else {
+      dispatch(
+        sendUpdateCartData({
+          cartDetailId: existingItem.cartDetailId,
+          productId: props.productId,
+          productQty: existingItem.productQty + +enteredAmount,
+          cartDetailStatus: 1,
+          estatusId: 1,
+          version: 1,
+          cartId: 15,
+        })
+      );
+    }
   };
 
   return (

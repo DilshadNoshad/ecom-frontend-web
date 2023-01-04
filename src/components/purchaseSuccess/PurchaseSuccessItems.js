@@ -6,7 +6,7 @@ const PurchaseSuccessItems = (props) => {
     <div className={classes["delivery_dates-products"]}>
       <div className={classes["delivery_dates-products_img_con"]}>
         <div className={classes["delivery_dates-products_img"]}>
-          <img src={thumbnail} alt="" />
+          <img src={thumbnail} alt={title} />
         </div>
       </div>
       <div className={classes["delivery_dates-est-time"]}>

@@ -1,0 +1,87 @@
+.shop-sort-bar {
+  font-weight: 400;
+  background: rgba(0, 0, 0, 0.03);
+  padding: 1rem 1.25rem;
+  border-radius: 2px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.shop-sort-bar__label {
+  color: #555;
+  font-size: var(--normal-sm-font);
+  margin: 0 0.3125rem 0 0;
+}
+.shop-sort-bar__options {
+  display: flex;
+  align-items: stretch;
+  flex: 1;
+  justify-content: flex-start;
+}
+.shop-sort-bar__options__option {
+  font-size: var(--normal-sm-font);
+  box-shadow: 0 1px 1px 0 rgb(0 0 0 / 2%);
+  height: 3.125rem;
+  line-height: 3.125rem;
+  border-radius: 2px;
+  border: 0;
+
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  user-select: none;
+  display: flex;
+  flex: 0 0 8.625rem;
+  align-items: center;
+  justify-content: center;
+  text-transform: capitalize;
+  padding: 0 1rem;
+  background: #fff;
+  white-space: nowrap;
+  margin-left: 1.5rem;
+  box-sizing: border-box;
+}
+.shop-sort-bar__controller {
+  display: flex;
+  align-items: center;
+}
+.shop-sort-bar__controller__state {
+  font-size: var(--normal-sm-font);
+  margin-right: 3rem;
+}
+
+.shop-sort-bar__controller__current {
+  color: var(--clr-primary);
+}
+
+.shop-sort-bar__controller-btn {
+  outline: none;
+  cursor: pointer;
+  font-size: var(--normal-sm-font);
+  font-weight: 300;
+  line-height: 1;
+  letter-spacing: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.1s cubic-bezier(0.4, 0, 0.6, 1);
+  color: rgba(0, 0, 0, 0.8);
+}
+
+.shop-sort-bar__controller__prev-btn {
+  box-shadow: 0 1px 1px 0 rgb(0 0 0 / 5%);
+  width: 3.25rem;
+  height: 3.125rem;
+  border-radius: 2px;
+  background: #fff;
+  border: 0;
+  border-right: 2px solid #f2f2f2;
+}
+.shop-sort-bar__controller__next-btn {
+  box-shadow: 0 1px 1px 0 rgb(0 0 0 / 5%);
+  width: 3.25rem;
+  height: 3.125rem;
+  border-radius: 2px;
+  background: #fff;
+  border: 0;
+}

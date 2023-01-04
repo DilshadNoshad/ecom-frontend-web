@@ -29,7 +29,7 @@ const OrderDetail = () => {
   if (status === "completed" && orderDetailData) {
     content = (
       <div className={classes.BRCaAU}>
-        <InfoBar />
+        <InfoBar orderNumber={orderDetailData.orderId} />
         <div className={classes.tickstl}>
           <div className={`${classes.tpnt} ${classes.left}`}> </div>
           <div className={`${classes.tpnt} ${classes.right}`}> </div>
