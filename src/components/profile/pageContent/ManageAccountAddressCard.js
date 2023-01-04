@@ -1,31 +1,30 @@
-import React, { useState, useContext, useEffect } from "react";
-import { Link } from "react-router-dom";
+import React, { useContext, useEffect } from "react";
 import useHttp from "../../../hooks/use-http";
-import { getAddressList } from "../../../Services/auth";
+import { getAddressList } from "../../../Services/address";
 import AuthContext from "../../../Store/auth-context";
 import classes from "./ManageAccount.module.css";
 
 const ManageAccountAddressCard = () => {
   const authCtx = useContext(AuthContext);
+
+  //Destructuring UserData of useId
+  const { id: userId } = authCtx?.userData;
+
   const {
     sendRequest,
     status,
-    data: addresses,
+    data: addList,
     error,
   } = useHttp(getAddressList, true);
-  const [dialogClose, setDialogClose] = useState(true);
-  const [addList, setAddList] = useState([]);
-  //console.log('-----------address modal bf effect----------------');
+
   useEffect(() => {
-    sendRequest({ id: authCtx?.userData?.id });
-    if (status === "completed" && !error) {
-      setAddList(addresses);
-      //console.log(addresses);
-    }
-  }, [status, error]);
-  // console.log(addList, "addlist");
-  return addList.map((obj, index) =>
-    index < 2 ? (
+    sendRequest(userId);
+  }, [sendRequest, userId]);
+
+  let content;
+
+  if (status === "completed" && addList && addList.length > 0) {
+    content = addList.map((obj) => (
       <div key={obj.addressId} className="dashboard-address-item shipping">
         <div className={classes["dashboard-address-default"]}>
           DEFAULT SHIPPING ADDRESS
@@ -41,8 +40,19 @@ const ManageAccountAddressCard = () => {
         </div>
         <div className={classes["dashboard-address-phone"]}>{obj.phone}</div>
       </div>
-    ) : null
-  );
+    ));
+  }
+  if (status === "completed" && (!addList || addList.length === 0)) {
+    content = <div className="centered">no address found</div>;
+  }
+  if (error) {
+    content = <div className="centered">{error}</div>;
+  }
+  if (status === "pending") {
+    content = <div className="centered">spinner</div>;
+  }
+  console.log(addList, "addressList");
+  return <div>{content}</div>;
 };
 
 export default ManageAccountAddressCard;

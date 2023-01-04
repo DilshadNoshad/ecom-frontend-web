@@ -44,6 +44,7 @@ const FlashSale = () => {
       </div>
     );
   }
+  console.log(flashProductsData, "-flashsale-");
   return (
     <Layout sectionId="flash-sale" title="Flash Sale">
       <div className={classes["flash-sale_cointainer"]}>

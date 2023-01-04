@@ -3,30 +3,62 @@ import { useNavigate } from "react-router-dom";
 import NoItems from "../../UI/noItems/NoItems";
 import OrderItem from "../../UI/order/OrderItem";
 import classes from "./MyOrders.module.css";
-
 import useHttp from "../../../hooks/use-http";
-import { getUserOrderList } from "../../../Services/auth";
 import AuthContext from "../../../Store/auth-context";
+import { getUserOrderList } from "../../../Services/order";
+import noPrdImage from "../../../assets/images/no-image.png";
 
 const MyOrders = () => {
   const navigate = useNavigate();
   const [toggleState, setToggleState] = useState(1);
-
   const authCtx = useContext(AuthContext);
+
+  //Destructuring UserData of useId
+  const { id: userId } = authCtx?.userData;
+
   const {
     sendRequest,
     status,
-    data: orders,
+    data: orderList,
     error,
   } = useHttp(getUserOrderList, true);
-  const [orderList, setOrderList] = useState([]);
+
   useEffect(() => {
-    sendRequest({ id: authCtx?.userData?.id });
-    if (status === "completed" && !error) {
-      setOrderList(orders);
-      // console.log(orderList);
-    }
-  }, [status, error]);
+    sendRequest(userId);
+  }, [sendRequest, userId]);
+
+  let content;
+
+  if (status === "completed" && orderList && orderList.length > 0) {
+    content = orderList.map((order) =>
+      order.orderDetails.map((od) => (
+        <OrderItem
+          key={order.orderId}
+          order={{
+            title: od.productName,
+            thumbnail:
+              od.productImgUrl == null || od.productImgUrl === ""
+                ? noPrdImage
+                : od.productImgUrl,
+            quantity: od.productQty,
+            orderStatus: order.orderStatus,
+            orderNumber: order.orderNumber,
+            requestedDate: order.orderDate,
+            link: `order_detail/${od.orderDetailId}`,
+          }}
+        />
+      ))
+    );
+  }
+  if (status === "completed" && (!orderList || orderList.length === 0)) {
+    content = <div className="centered">no data</div>;
+  }
+  if (error) {
+    content = <div className="centered">{error}</div>;
+  }
+  if (status === "pending") {
+    content = <div className="centered">spinner</div>;
+  }
 
   const toggleTab = (index) => {
     setToggleState(index);
@@ -35,6 +67,8 @@ const MyOrders = () => {
   const shoppingBtnHandler = () => {
     navigate("/");
   };
+
+  console.log(orderList, "-ordelist in my order-");
 
   return (
     <div className={classes["tabs-container"]}>
@@ -90,27 +124,7 @@ const MyOrders = () => {
           }
         >
           <div className="order-list">
-            <div className="orders">
-              {orderList.map((order) =>
-                order.orderDetails.map((od) => (
-                  <OrderItem
-                    key={order.orderId}
-                    order={{
-                      title: od.productName,
-                      thumbnail:
-                        od.productImgUrl == null || od.productImgUrl === ""
-                          ? "https://southwesttrainingsolutions.co.uk/wp-content/uploads/2020/07/no-image.png"
-                          : od.productImgUrl,
-                      quantity: od.productQty,
-                      orderStatus: order.orderStatus,
-                      orderNumber: order.orderNumber,
-                      requestedDate: order.orderDate,
-                      link: `order_detail/${od.orderDetailId}`,
-                    }}
-                  />
-                ))
-              )}
-            </div>
+            <div className="orders">{content}</div>
           </div>
         </div>
 

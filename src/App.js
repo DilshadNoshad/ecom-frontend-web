@@ -33,22 +33,9 @@ import ShopPage from "./pages/shop/ShopPage";
 function App() {
   const isCartChange = useSelector((state) => state.cart.changed);
   const dispatch = useDispatch();
-  // useEffect(() => {
-  //   dispatch(fetchCartData());
-  // }, [dispatch]);
 
   useEffect(() => {
-    // if (initialState) {
-    //   initialState = false;
-    //   return;
-    // }
-
-    // if (isCartChange) {
-    // console.log(isCartChange)
     dispatch(fetchCartData());
-    // } else {
-    dispatch(fetchCartData());
-    // }
   }, [isCartChange, dispatch]);
   const checkoutItems = useSelector((state) => state.checkout.checkoutItems);
   const authCtx = useContext(AuthContext);

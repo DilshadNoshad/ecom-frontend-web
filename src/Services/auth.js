@@ -308,7 +308,7 @@ export async function getAddressList() {
 
   return data;
 }
-
+//remove
 export async function getUserOrderList() {
   const response = await fetch(`${JAVA_SVC}/orders/getuserorder/30`);
   const data = await response.json();
@@ -319,7 +319,7 @@ export async function getUserOrderList() {
 
   return data;
 }
-
+//remove
 export async function getUserOrderdetails(orderDetailId) {
   const response = await fetch(`${JAVA_SVC}/orderdetails/${orderDetailId}`);
   const data = await response.json();

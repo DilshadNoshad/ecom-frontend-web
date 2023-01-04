@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import { stringToDate } from "../../../entities/GeneralFunc";
 import classes from "./OrderItem.module.css";
 const OrderItem = (props) => {
   const {
@@ -17,7 +18,7 @@ const OrderItem = (props) => {
       <div className={classes["reverse-info"]}>
         <div className="pull-left reverse-info-left">
           <div className={`${classes["info-createdAt"]} ${classes.text}`}>
-            Requested on {requestedDate}
+            Requested on {stringToDate(requestedDate)}
           </div>
 
           <div className="info-number">

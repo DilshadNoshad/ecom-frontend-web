@@ -1,33 +1,19 @@
-import React, {useState, useContext, useEffect} from "react";
+import React, { useContext } from "react";
 import { Link } from "react-router-dom";
-import useHttp from "../../../hooks/use-http";
-import { getAddressList } from "../../../Services/auth";
 import AuthContext from "../../../Store/auth-context";
 import classes from "./ManageAccount.module.css";
 import ManageAccountAddressCard from "./ManageAccountAddressCard.js";
 import ManageAccountOrder from "../pageContent/ManageAccount/ManageAccountOrder";
 
 const ManageAccount = () => {
-
   const authCtx = useContext(AuthContext);
-  const { sendRequest, status, data: addresses, error } = useHttp(getAddressList, true);
-  const [dialogClose, setDialogClose] = useState(true);
-  const [addList, setAddList] = useState({});
-  //console.log('-----------address modal bf effect----------------');
-  useEffect(() => {
-    sendRequest({'id':authCtx?.userData?.id});
-    if (status === 'completed' && !error){
-      setAddList(addresses);
-      //console.log(addresses);
-      
-    }
-  }, [status, error]);
 
-  const Lst = () =>{
-    addList.map((obj)=>{
-      //console.log(obj.address1);
-    });
-  }
+  //Destructuring UserData of userData
+  const {
+    first: firstName,
+    last: lastName,
+    email: userEmail,
+  } = authCtx?.userData;
 
   return (
     <div className={classes["profInfo_wrapper"]}>
@@ -37,10 +23,10 @@ const ManageAccount = () => {
           <Link to="#">EDIT</Link>
         </div>
         <div className="dashboard-info">
-          <div className={classes["dashboard-info-item"]}>{authCtx?.userData?.last}</div>
           <div className={classes["dashboard-info-item"]}>
-            {authCtx?.userData?.email}
+            {`${firstName != null ? firstName : ""} ${lastName}`}
           </div>
+          <div className={classes["dashboard-info-item"]}>{userEmail}</div>
           <div className={`${classes["dashboard-info-item"]} ${classes.last}`}>
             <Link to="#">Subscribe to our Newsletter</Link>
           </div>
@@ -75,14 +61,11 @@ const ManageAccount = () => {
               </div>
             </div>
             <div className={classes["next-table-body"]}>
-              
               <ManageAccountOrder />
-          
             </div>
           </div>
         </div>
       </div>
-        
     </div>
   );
 };

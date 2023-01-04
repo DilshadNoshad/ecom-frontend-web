@@ -1,7 +1,7 @@
 import React, { Fragment, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import useHttp from "../../../../hooks/use-http";
-import { getUserOrderdetails } from "../../../../Services/auth";
+import { getUserOrderdetails } from "../../../../Services/order";
 import Button from "../../../UI/buttons/Button";
 import LoadingSpinner from "../../../UI/loadingSpinner/LoadingSpinner";
 import DeliveryStatus from "./DeliveryStatus";
@@ -10,6 +10,7 @@ import classes from "./OrderDetail.module.css";
 import OrderItem from "./OrderItem";
 import OrderItemTotal from "./OrderItemTotal";
 import Stepper from "./Stepper";
+
 const OrderDetail = () => {
   const params = useParams();
   const { orderDetailId } = params;
@@ -108,12 +109,12 @@ const OrderDetail = () => {
               title: orderDetailData.productName,
               thumbnail: orderDetailData.productImgUrl,
               quantity: orderDetailData.productQty,
-              price: orderDetailData.productPrice,
+              price: orderDetailData.product_original_price,
             }}
           />
           <OrderItemTotal
             itemTotal={{
-              shippingPrice: orderDetailData.shippingCost,
+              shippingPrice: orderDetailData.shippingTtl,
               finalPriceWithoutTax: orderDetailData.productFinalPriceWithoutTax,
               finalPriceWithTax: orderDetailData.productFinalPriceWithTax,
             }}
@@ -135,6 +136,8 @@ const OrderDetail = () => {
       </div>
     );
   }
+
+  console.log(orderDetailData, "-ordedetail in orderDetail-");
   return <Fragment>{content}</Fragment>;
 };
 

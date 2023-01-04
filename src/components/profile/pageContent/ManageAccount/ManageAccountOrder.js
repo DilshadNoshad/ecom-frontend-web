@@ -1,58 +1,74 @@
-import React, { useState, useContext, useEffect } from "react";
-import { Link } from "react-router-dom";
+import React, { useContext, useEffect } from "react";
+import { getPrice, stringToDate } from "../../../../entities/GeneralFunc";
 import useHttp from "../../../../hooks/use-http";
-import { getUserOrderList } from "../../../../Services/auth";
+import { getUserOrderList } from "../../../../Services/order";
 import AuthContext from "../../../../Store/auth-context";
-//import classes from "./../ManageAccount.module.css";
-import GenFunc from "../../../../entities/GeneralFunc.js";
 
 const ManageAccountOrder = () => {
   const authCtx = useContext(AuthContext);
+
+  //Destructuring UserData of useId
+  const { id: userId } = authCtx?.userData;
+
   const {
     sendRequest,
     status,
-    data: orders,
+    data: orderList,
     error,
   } = useHttp(getUserOrderList, true);
 
-  const [orderList, setOrderList] = useState([]);
   useEffect(() => {
-    sendRequest({ id: authCtx?.userData?.id });
-    if (status === "completed" && !error) {
-      setOrderList(orders);
-      // console.log(orderList);
-    }
-  }, [status, error]);
+    sendRequest(userId);
+  }, [sendRequest, userId]);
 
-  const stringToDate = (dt) => {
-    const date = new Date(dt);
-    return `${date.getDate()}/${date.getMonth()}/${date.getFullYear()}`;
-  };
+  let content;
 
-  const getPrice = (price) => {
-    return `RS. ${price}`;
-  };
+  if (status === "completed" && orderList && orderList.length > 0) {
+    content = orderList.map((order) =>
+      order.orderDetails.map((obj) => (
+        <tr key={order.orderId}>
+          <td>{order.orderNumber}</td>
+          <td>{stringToDate(order.orderDate)}</td>
+          <td>
+            <img
+              src={obj.productImgUrl}
+              alt={obj.productName}
+              width="40"
+              height="40"
+            />
+          </td>
+          <td>{getPrice(obj.productFinalPriceWithTax)}</td>
+          <td>MANAGE</td>
+        </tr>
+      ))
+    );
+  }
+  if (status === "completed" && (!orderList || orderList.length === 0)) {
+    content = (
+      <tr className="centered">
+        <td>no data</td>
+      </tr>
+    );
+  }
+  if (error) {
+    content = (
+      <tr className="centered">
+        <td>{error}</td>
+      </tr>
+    );
+  }
+  if (status === "pending") {
+    content = (
+      <tr className="centered">
+        <td>spinner</td>
+      </tr>
+    );
+  }
 
+  console.log(orderList, "-ordelist in manage order-");
   return (
     <table>
-      <tbody>
-        {orderList.map((obj, index) => (
-          <tr key={index}>
-            <td>{obj.orderNumber}</td>
-            <td>{stringToDate(obj.orderDate)}</td>
-            <td>
-              <img
-                src="https://static-01.daraz.pk/p/28e40033fd82db1feeecf50c77c639fe.jpg"
-                alt="keychain"
-                width={40}
-                height={40}
-              />
-            </td>
-            <td>RS. {getPrice(obj.orderPrice)}</td>
-            <td>MANAGE</td>
-          </tr>
-        ))}
-      </tbody>
+      <tbody>{content}</tbody>
     </table>
   );
 };
