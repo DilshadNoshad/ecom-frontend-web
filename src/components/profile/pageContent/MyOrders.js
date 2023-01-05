@@ -7,6 +7,8 @@ import useHttp from "../../../hooks/use-http";
 import AuthContext from "../../../Store/auth-context";
 import { getUserOrderList } from "../../../Services/order";
 import noPrdImage from "../../../assets/images/no-image.png";
+import LoadingSpinner from "../../UI/loadingSpinner/LoadingSpinner";
+import { executeWithTime } from "../../../entities/GeneralFunc";
 
 const MyOrders = () => {
   const navigate = useNavigate();
@@ -27,37 +29,19 @@ const MyOrders = () => {
     sendRequest(userId);
   }, [sendRequest, userId]);
 
-  let content;
-
-  if (status === "completed" && orderList && orderList.length > 0) {
-    content = orderList.map((order) =>
-      order.orderDetails.map((od) => (
-        <OrderItem
-          key={order.orderId}
-          order={{
-            title: od.productName,
-            thumbnail:
-              od.productImgUrl == null || od.productImgUrl === ""
-                ? noPrdImage
-                : od.productImgUrl,
-            quantity: od.productQty,
-            orderStatus: order.orderStatus,
-            orderNumber: order.orderNumber,
-            requestedDate: order.orderDate,
-            link: `order_detail/${od.orderDetailId}`,
-          }}
-        />
-      ))
+  if (status === "pending") {
+    return (
+      <div className="centered">
+        <LoadingSpinner />
+      </div>
     );
   }
-  if (status === "completed" && (!orderList || orderList.length === 0)) {
-    content = <div className="centered">no data</div>;
-  }
+
   if (error) {
-    content = <div className="centered">{error}</div>;
+    return <div className="centered focused">{error}</div>;
   }
-  if (status === "pending") {
-    content = <div className="centered">spinner</div>;
+  if (status === "completed" && (!orderList || orderList.length === 0)) {
+    return <p>no order found</p>;
   }
 
   const toggleTab = (index) => {
@@ -68,7 +52,7 @@ const MyOrders = () => {
     navigate("/");
   };
 
-  console.log(orderList, "-ordelist in my order-");
+  executeWithTime(orderList, "-ordelist in my order-");
 
   return (
     <div className={classes["tabs-container"]}>
@@ -124,7 +108,27 @@ const MyOrders = () => {
           }
         >
           <div className="order-list">
-            <div className="orders">{content}</div>
+            <div className="orders">
+              {orderList.map((order) =>
+                order.orderDetails.map((od, i) => (
+                  <OrderItem
+                    key={i}
+                    order={{
+                      title: od.productName,
+                      thumbnail:
+                        od.productImgUrl == null || od.productImgUrl === ""
+                          ? noPrdImage
+                          : od.productImgUrl,
+                      quantity: od.productQty,
+                      orderStatus: order.orderStatus,
+                      orderNumber: order.orderNumber,
+                      requestedDate: order.orderDate,
+                      link: `order_detail/${od.orderDetailId}`,
+                    }}
+                  />
+                ))
+              )}
+            </div>
           </div>
         </div>
 

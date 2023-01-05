@@ -17,6 +17,7 @@ const OrderDetail = () => {
 
   const {
     sendRequest,
+    error,
     status,
     data: orderDetailData,
   } = useHttp(getUserOrderdetails, true);
@@ -25,10 +26,28 @@ const OrderDetail = () => {
     sendRequest(orderDetailId);
   }, [sendRequest, orderDetailId]);
 
-  let content;
+  if (status === "pending") {
+    return (
+      <div className="centered">
+        <LoadingSpinner />
+      </div>
+    );
+  }
 
-  if (status === "completed" && orderDetailData) {
-    content = (
+  if (error) {
+    return <div className="centered focused">{error}</div>;
+  }
+  if (
+    status === "completed" &&
+    (!orderDetailData || orderDetailData.length === 0)
+  ) {
+    return <p>no address found</p>;
+  }
+
+  console.log(orderDetailData, "-ordedetail in orderDetail-");
+
+  return (
+    <Fragment>
       <div className={classes.BRCaAU}>
         <InfoBar orderNumber={orderDetailData.orderId} />
         <div className={classes.tickstl}>
@@ -121,24 +140,8 @@ const OrderDetail = () => {
           />
         </div>
       </div>
-    );
-  }
-  if (status === "completed" && !orderDetailData) {
-    content = <p className="centered">Found no products.</p>;
-  }
-  // if (error) {
-  //   content = <div className="centered focused">{error}</div>;
-  // }
-  if (status === "pending") {
-    content = (
-      <div className={classes.loading}>
-        <LoadingSpinner />
-      </div>
-    );
-  }
-
-  console.log(orderDetailData, "-ordedetail in orderDetail-");
-  return <Fragment>{content}</Fragment>;
+    </Fragment>
+  );
 };
 
 export default OrderDetail;

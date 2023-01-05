@@ -1,54 +1,29 @@
-import React, { useContext, useEffect, useState } from "react";
-import { Link, useLocation, useNavigate, useHistory } from "react-router-dom";
-import AuthContext from '../../../Store/auth-context';
+import { Link, useNavigate } from "react-router-dom";
 import Button from "../../UI/buttons/Button";
 import classes from "./MyProfile.module.css";
-import {User} from "../../../entities/user";
-import useHttp from "../../../hooks/use-http";
-import { getUserById } from "../../../Services/auth";
-import { useDispatch } from "react-redux";
+
+import { executeWithTime, getDateFormate } from "../../../entities/GeneralFunc";
 
 const MyProfile = () => {
-
   const navigate = useNavigate();
-  /*
-  const dispatch = useDispatch();
-  const authCtx = useContext(AuthContext);
-  const navigate = useNavigate();
-  const location = useLocation();
-*/
-  const initialToken = localStorage.getItem("token");
-  const userData = JSON.parse( localStorage.getItem("user"));
 
-  //console.log('---------profile-----------');
-  //console.log(userData);
-  const [status, error]= useState();
-  //const { sendRequest, status, data: userAuth, error } = useHttp(getUserById);
-  /*
-  sendRequest({
-    id: userData.id
-  });
-*/
+  const userData = JSON.parse(localStorage.getItem("user"));
+
   const navigateUrl = (e) => {
     e.preventDefault();
-    //console.log('------------navigate button click');
     navigate("/profile/edit");
-  }  
+  };
 
-  const getDateFormate = (dob)=>{
-    return (`${new Date(dob).getDate()}-${new Date(dob).getMonth()}-${new Date(dob).getFullYear()}` )
-  }
+  executeWithTime(undefined, "-myprofile-");
 
-  //const loggedInUsername = authCtx.userData?.username;  
-  //console.log(authCtx);
-  const loggedInUsername = userData?.username;  
   return (
     <div className={classes["my-profile"]}>
       <div className={classes["my-profile-bd"]}>
         <div className={classes["my-profile-item"]}>
           <h3 className={classes["my-profile-item-title"]}>Full name</h3>
           <div className={classes["my-profile-item-info"]}>
-            {userData?.username}</div>
+            {userData?.username}
+          </div>
         </div>
         <div className={classes["my-profile-item"]}>
           <h3 className={classes["my-profile-item-title"]}>
@@ -58,7 +33,7 @@ const MyProfile = () => {
             </Link>
           </h3>
           <div className={classes["my-profile-item-info"]}>
-          {userData?.email}
+            {userData?.email}
           </div>
         </div>
         <div className={classes["my-profile-item"]}>
@@ -68,7 +43,9 @@ const MyProfile = () => {
               Change
             </Link>
           </h3>
-          <div className={classes["my-profile-item-info"]}>{userData?.mobile}</div>
+          <div className={classes["my-profile-item-info"]}>
+            {userData?.mobile}
+          </div>
         </div>
         <div className={classes["my-profile-item"]}>
           <h3 className={classes["my-profile-item-title"]}>Birthday</h3>
@@ -90,17 +67,13 @@ const MyProfile = () => {
         <Link onClick={navigateUrl} className={classes.link} to="#">
           Edit Profile
         </Link>
-        <Button
-          onClick={navigateUrl}
-          className={classes["md-edit-button"]}
-        
-        >
+        <Button onClick={navigateUrl} className={classes["md-edit-button"]}>
           edit profile
         </Button>
         <Button
           // onClick={}
-
-          className={classes["md-edit-button"]}        >
+          className={classes["md-edit-button"]}
+        >
           change password
         </Button>
       </div>

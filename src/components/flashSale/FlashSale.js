@@ -19,37 +19,31 @@ const FlashSale = () => {
     sendRequest();
   }, [sendRequest]);
 
-  let content;
-
-  if (
-    status === "completed" &&
-    flashProductsData &&
-    flashProductsData.length > 0
-  ) {
-    content = <FlashSaleBody fetchData={flashProductsData} />;
-  }
-  if (
-    status === "completed" &&
-    (!flashProductsData || flashProductsData.length === 0)
-  ) {
-    content = <p className="centered">Found no products.</p>;
-  }
-  if (error) {
-    content = <div className="centered focused">{error}</div>;
-  }
   if (status === "pending") {
-    content = (
+    return (
       <div className="centered">
         <LoadingSpinner />
       </div>
     );
   }
+
+  if (error) {
+    return <div className="centered focused">{error}</div>;
+  }
+  if (
+    status === "completed" &&
+    (!flashProductsData || flashProductsData.length === 0)
+  ) {
+    return <p>Found no products.</p>;
+  }
+
   console.log(flashProductsData, "-flashsale-");
+
   return (
     <Layout sectionId="flash-sale" title="Flash Sale">
       <div className={classes["flash-sale_cointainer"]}>
         <FlashSaleHeader />
-        {content}
+        <FlashSaleBody fetchData={flashProductsData} />
       </div>
     </Layout>
   );

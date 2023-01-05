@@ -211,7 +211,9 @@ const CheckoutForm = (props) => {
 
   return (
     <Fragment>
-      <div className={classes["delivery_form-title"]}>Delivery Information</div>
+      <div className={classes["delivery_form-title"]}>
+        {props.formTitleInfo}
+      </div>
       <div className={classes["delivery_user_info"]}>
         <form onSubmit={formSubmitHandler}>
           <div className={classes["delivery_form-container"]}>

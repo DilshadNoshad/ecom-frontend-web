@@ -25,16 +25,16 @@ const OrderItem = (props) => {
             <span className={classes.text}>Order&nbsp;</span>
             <span className="text info desc bold" />
 
-            <Link to="#" className={classes.link}>
+            <Link to={link ? link : "#"} className={classes.link}>
               #{orderNumber}
             </Link>
           </div>
         </div>
-        <Link to="#" className={classes.link}>
+        <Link to={link ? link : "#"} className={classes.link}>
           MORE DETAILS
         </Link>
       </div>
-      <Link to={link} className={classes["order-item"]}>
+      <div className={classes["order-item"]}>
         {/* <div> */}
         <div className={`${classes["item-con"]} ${classes["item-pic"]}`}>
           <img src={thumbnail} alt="" />
@@ -57,7 +57,7 @@ const OrderItem = (props) => {
         </div>
 
         <div className={classes["item-con"]}></div>
-      </Link>
+      </div>
     </div>
   );
 };
