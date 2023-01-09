@@ -32,12 +32,30 @@ const RicProdActions = (props) => {
     const enteredAmount = amountInputRef.current.value;
     dispatch(
       checkoutAction.addItemToCheckout({
-        id: props.productId,
-        name: props.productTitle,
-        price: props.productPrice,
-        totalPrice: props.productPrice * +enteredAmount,
-        thumbnail: props.productThumbnail,
-        quantity: +enteredAmount,
+        productId: props.productId,
+        productName: props.productTitle,
+        productDesc: null,
+        shippingCost: props.productDeliverycost,
+        shippingTax: 0,
+        shippingTtl: 2,
+        productPrice: props.productPrice * +enteredAmount,
+        productCost: props.productPrice * +enteredAmount,
+        productTax: 0,
+        productFinalPriceWithTax:
+          props.productPrice * +enteredAmount + props.productDeliverycost,
+        productFinalPriceWithoutTax:
+          props.productPrice * +enteredAmount + props.productDeliverycost,
+        productOtherTax: 0,
+        productQty: +enteredAmount,
+        ttlPrice:
+          props.productPrice * +enteredAmount + props.productDeliverycost,
+        ttlTax: 0,
+        vendorId: 0,
+        vendorName: null,
+        estatusId: 1,
+        version: 0,
+        product_original_price: props.productPrice,
+        productImgUrl: props.productThumbnail,
       })
     );
     dispatch(uiActions.OpenAuthPop());

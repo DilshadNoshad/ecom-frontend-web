@@ -34,7 +34,7 @@ const ManageAccountAddressCard = () => {
     return <div className="centered focused">{error}</div>;
   }
   if (status === "completed" && (!addList || addList.length === 0)) {
-    return <p>no address found</p>;
+    return <div className="centered focused">no address found</div>;
   }
 
   console.log(addList, "-addressList-");

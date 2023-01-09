@@ -75,6 +75,7 @@ const Checkout = (props) => {
     navigate("/checkout/success_checkout");
     // dispatch(cartAction.clearCart());
   };
+  console.log(checkoutItems, "-checkoutitems");
   return (
     <div id={classes["muradi_checkout"]}>
       <section>

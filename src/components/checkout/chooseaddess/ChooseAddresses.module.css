@@ -1,0 +1,141 @@
+.chooseaddress {
+    overflow: auto;
+  }
+  
+  .head {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+  }
+  
+  .title {
+    font-size: var(--normal-font);
+    color: #212121;
+  }
+  .actionbtn {
+    color: #1a9cb7;
+    text-decoration: none;
+    cursor: pointer;
+    font-size: var(--normal-sm-font);
+  }
+  .addressbook_content {
+    display: flex;
+    flex-flow: row nowrap;
+    padding: 12px;
+    border: 1px solid #dadada;
+    border-radius: 4px;
+    margin-bottom: 12px;
+  }
+  
+  .leftcontent {
+    margin-right: 12px;
+  }
+  
+  .c-mob-title {
+    margin-bottom: 6px;
+  }
+  
+  .c-mob-title .title {
+    font-size: 16px;
+    color: #333;
+    line-height: 19px;
+    font-weight: 500;
+  }
+  .c-mob-title .mobile {
+    font-size: 16px;
+    color: #333;
+    line-height: 19px;
+    margin-left: 12px;
+  }
+  
+  .tag-home {
+    background-image: linear-gradient(-143deg, #ff7b53, #ff4b28);
+  }
+  .tag-office {
+    background-image: linear-gradient(39deg, #0094b6 1%, #5bbbce 97%);
+  }
+  
+  .tag {
+    border-radius: 8px;
+    color: var(--clr-light);
+    font-size: 9px;
+    display: inline-block;
+    height: 15px;
+    text-align: center;
+    vertical-align: text-bottom;
+    line-height: 15px;
+    margin-right: 5px;
+    padding: 0 7px;
+  }
+  
+  .addressInfo {
+    font-size: 14px;
+    color: #212121;
+    letter-spacing: 0;
+    line-height: 21px;
+    margin-bottom: 6px;
+  }
+  
+  .postcode {
+    font-size: 12px;
+    color: #757575;
+    margin-bottom: 12px;
+  }
+  .c-address-book-default {
+    display: flex;
+    margin-bottom: 6px;
+    justify-content: flex-end;
+  }
+  .c-address-book-tag {
+    border: 1px solid #26a4c0;
+    border-radius: 4px;
+    font-size: 12px;
+    color: #26a4c0;
+    line-height: 14px;
+    padding: 2px 5px;
+    margin-right: 6px;
+  }
+  
+  .footaction {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-top: 24px;
+  }
+  
+  .save_sm_btn {
+    display: block;
+    width: 35.5%;
+    background-color: var(--clr-link);
+    color: var(--clr-light);
+    text-align: center;
+    font-size: var(--normal-sm-font);
+    border-radius: 2px;
+    padding: 1.25rem;
+    transition: all 0.3s ease-in;
+  }
+  
+  .save_sm_btn:hover,
+  .save_sm_btn:active {
+    background-color: var(--clr-link-hover);
+  }
+  .cancle_sm_btn {
+    display: block;
+    width: 35.5%;
+    background-color: var(--clr-gray-light);
+    color: var(--clr-light);
+    text-align: center;
+    font-size: var(--normal-sm-font);
+    border-radius: 2px;
+    padding: 1.25rem;
+    transition: all 0.3s ease-in;
+  }
+  
+  .cancle_sm_btn:hover,
+  .cancle_sm_btn:active {
+    background-color: var(--clr-gray-light-b);
+  }
+  

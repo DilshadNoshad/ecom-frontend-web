@@ -58,7 +58,7 @@ const useUserinput = (validateValue) => {
     inputChangeHandler,
     inputBlurHandler,
     reset,
-    setValue
+    setValue,
   };
 };
 

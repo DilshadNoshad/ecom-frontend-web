@@ -2,6 +2,7 @@ import React, { Fragment, useState } from "react";
 import AddressBookModal from "../../profile/pageContent/addressBookModal/AddressBookModal";
 import Button from "../../UI/buttons/Button";
 import classes from "./ChooseAddress.module.css";
+import ChooseAddresses from "./ChooseAddresses";
 const ChooseAddress = (props) => {
   return (
     <Fragment>
@@ -18,7 +19,7 @@ const ChooseAddress = (props) => {
           </div>
         </div>
         <div className={classes.addressbook}>
-          <div className={classes["addressbook_content"]}>
+          {/* <div className={classes["addressbook_content"]}>
             <div className={classes.leftcontent}>
               <label className={classes["form-control"]}>
                 <input type="radio" name="radio" />
@@ -137,7 +138,8 @@ const ChooseAddress = (props) => {
                 </span>
               </div>
             </div>
-          </div>
+          </div> */}
+          <ChooseAddresses />
         </div>
         <div className={classes.footaction}>
           <Button
