@@ -39,8 +39,8 @@ const ManageAccountAddressCard = () => {
 
   console.log(addList, "-addressList-");
 
-  return addList.map((obj) => (
-    <div key={obj.addressId} className="dashboard-address-item shipping">
+  return addList.slice(0, 2).map((obj) => (
+    <div key={obj.addressId} className={classes["dashboard-shipping-item"]}>
       <div className={classes["dashboard-address-default"]}>
         DEFAULT SHIPPING ADDRESS
       </div>

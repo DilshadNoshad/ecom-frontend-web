@@ -93,8 +93,12 @@ function App() {
         {isLoggedIn && (
           <Route path="/profile" element={<ProfileLayout />}>
             <Route index element={<ManageAccountPage />} />
-            <Route path="view" element={<MyProfilePage />} />
-            <Route path="edit" element={<EditProfile />} />
+            <Route path="userinfo">
+              <Route index element={<MyProfilePage />} />
+              <Route path="edit" element={<EditProfile />} />
+            </Route>
+            {/* <Route path="view" element={<MyProfilePage />} />
+            <Route path="edit" element={<EditProfile />} /> */}
             <Route path="address" element={<AddressBookPage />} />
             <Route path="my_orders">
               <Route index element={<MyOrderPage />} />

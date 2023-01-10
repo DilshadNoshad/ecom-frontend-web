@@ -81,7 +81,7 @@ const Checkout = (props) => {
       <section>
         <div className={classes["panel_container"]}>
           <div className={classes["panel_left"]}>
-            {/* <CheckoutForm formTitleInfo="Delivery Information" /> */}
+            <CheckoutForm formTitleInfo="Delivery Information" />
             <SelectedAddress />
             {checkoutItems.map((item, index) => (
               <CheckoutItems

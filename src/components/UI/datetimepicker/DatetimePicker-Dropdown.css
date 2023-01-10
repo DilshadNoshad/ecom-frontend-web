@@ -1,0 +1,31 @@
+.dropdown-date-container {
+  display: flex;
+
+  width: 100%;
+}
+
+.datedropdown_input-container label {
+  font-size: var(--normal-xsm-font);
+  height: 15px;
+  overflow: hidden;
+  color: var(--clr-secondary-main);
+  display: block;
+  margin-bottom: 5px;
+}
+
+.dropdown-year-container,
+.dropdown-month-container,
+.dropdown-day-container {
+  margin: 0 5px 0 0;
+}
+.dropdown-year-container select,
+.dropdown-month-container select,
+.dropdown-day-container select {
+  width: 100%;
+  border: 1px solid var(--clr-gray-light);
+  font-size: var(--normal-sm-font);
+  height: 40px;
+  padding: 0 18px 0 10px;
+  outline: none;
+  color: var(--clr-secondary-input);
+}

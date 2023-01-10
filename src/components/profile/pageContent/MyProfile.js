@@ -11,7 +11,7 @@ const MyProfile = () => {
 
   const navigateUrl = (e) => {
     e.preventDefault();
-    navigate("/profile/edit");
+    navigate("/profile/userinfo/edit");
   };
 
   executeWithTime(undefined, "-myprofile-");

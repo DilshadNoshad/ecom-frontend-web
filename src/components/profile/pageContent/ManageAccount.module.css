@@ -2,7 +2,7 @@
   display: flex;
   flex-flow: row wrap;
   justify-content: center;
-  align-items: center;
+  align-items: stretch;
   gap: 2%;
 }
 
@@ -10,8 +10,6 @@
   flex-basis: 28.5%;
   background-color: #fff;
   padding: 16px;
-  align-self: stretch;
-  /* margin-right: 12px; */
 }
 
 .dashboard-mod-title {
@@ -44,11 +42,11 @@
   flex-basis: 69.5%;
   background-color: #fff;
   padding: 16px;
-  align-self: stretch;
 }
 .dashboard-address-wrap {
   display: flex;
-  gap: 2%;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .dashboard-address-default {
@@ -116,4 +114,12 @@
 }
 .next-table-body tr:hover {
   background: #fafafa;
+}
+
+.dashboard-shipping-item {
+  flex: 1 0 calc(100% / 2);
+}
+.dashboard-shipping-item:nth-child(2) {
+  border-left: 2px solid #eff0f5;
+  padding-left: 16px;
 }

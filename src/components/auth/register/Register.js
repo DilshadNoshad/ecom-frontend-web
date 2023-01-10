@@ -142,7 +142,7 @@ const Register = () => {
         <div className={classes["auth_modul_col1"]}>
           <Input
             id="mobile"
-            label="Phone Number or Email"
+            label="Phone Number"
             type="text"
             placeHolder="Please enter your Phone Number"
             required={true}
@@ -181,6 +181,8 @@ const Register = () => {
             invalidMsg={"please enter your password"}
           />
           <MyDatePicker
+            id="Birthday"
+            label="Birthday"
             onChange={onDatePickerChange}
             currentDate={enteredOptDate}
           />

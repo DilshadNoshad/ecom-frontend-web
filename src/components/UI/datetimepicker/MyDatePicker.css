@@ -1,0 +1,53 @@
+.react-datepicker-wrapper,
+.react-datepicker__input-container,
+.react-datepicker__input-container input {
+  display: block;
+  width: 100%;
+}
+
+.react-datepicker__input-container label {
+  font-size: var(--normal-xsm-font);
+  height: 15px;
+  overflow: hidden;
+  color: var(--clr-secondary-main);
+  display: block;
+  margin-bottom: 5px;
+}
+
+.react-datepicker__input-container input {
+  border: 1px solid var(--clr-gray-light);
+  font-size: var(--normal-sm-font);
+  height: 40px;
+  padding: 0 35px 0 10px;
+  outline: none;
+  color: var(--clr-secondary-input);
+}
+
+.react-datepicker__input-container {
+  margin-bottom: 24px;
+}
+
+.react-datepicker__day-name,
+.react-datepicker__day,
+.react-datepicker__time-name {
+  color: #000;
+  display: inline-block;
+  width: 2.8rem;
+  line-height: 2.4rem;
+  text-align: center;
+  margin: 0.199rem;
+  font-size: 1.4rem;
+}
+
+.react-datepicker__month {
+  margin: 1.4rem;
+}
+
+.react-datepicker__header--custom > div button,
+.react-datepicker__header--custom > div select {
+  font-size: 1.5rem;
+  padding: 4px;
+}
+.react-datepicker__header--custom > div button > ion-icon {
+  height: 100%;
+}

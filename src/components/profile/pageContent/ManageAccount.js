@@ -20,7 +20,7 @@ const ManageAccount = () => {
       <div className={classes["dashboard-profile"]}>
         <div className={classes["dashboard-mod-title"]}>
           Personal Profile <span>|</span>&nbsp;
-          <Link to="#">EDIT</Link>
+          <Link to="/profile/userinfo/edit">EDIT</Link>
         </div>
         <div className="dashboard-info">
           <div className={classes["dashboard-info-item"]}>
@@ -35,7 +35,7 @@ const ManageAccount = () => {
       <div className={classes["dashboard-address"]}>
         <div className={classes["dashboard-mod-title"]}>
           Address Book <span>|</span>&nbsp;
-          <Link to="#">EDIT</Link>
+          <Link to="/profile/address">EDIT</Link>
         </div>
         <div className={classes["dashboard-address-wrap"]}>
           <ManageAccountAddressCard />

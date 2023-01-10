@@ -29,6 +29,9 @@ const MyOrders = () => {
     sendRequest(userId);
   }, [sendRequest, userId]);
 
+  const shoppingBtnHandler = () => {
+    navigate("/");
+  };
   if (status === "pending") {
     return (
       <div className="centered">
@@ -41,15 +44,17 @@ const MyOrders = () => {
     return <div className="centered focused">{error}</div>;
   }
   if (status === "completed" && (!orderList || orderList.length === 0)) {
-    return <p>no order found</p>;
+    return (
+      <NoItems
+        btnText="CONTINUE SHOPPING"
+        onClick={shoppingBtnHandler}
+        noItemText="There are no orders yet."
+      />
+    );
   }
 
   const toggleTab = (index) => {
     setToggleState(index);
-  };
-
-  const shoppingBtnHandler = () => {
-    navigate("/");
   };
 
   executeWithTime(orderList, "-ordelist in my order-");

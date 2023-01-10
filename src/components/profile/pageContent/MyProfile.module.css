@@ -4,13 +4,15 @@
 }
 
 .my-profile-bd {
+  --gap: 2%;
   display: flex;
   flex-flow: row wrap;
   margin-bottom: 80px;
+  gap: var(--gap);
 }
 
 .my-profile-item {
-  flex-basis: calc(100% / 3);
+  flex-basis: calc(100% / 3 - var(--gap));
   margin-bottom: 40px;
 }
 

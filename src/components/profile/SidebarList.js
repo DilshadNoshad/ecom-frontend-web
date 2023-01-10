@@ -20,7 +20,7 @@ const SidebarList = () => {
               className={({ isActive }) => {
                 return isActive ? classes.active : " ";
               }}
-              to="/profile/view"
+              to="/profile/userinfo"
             >
               My Profile
             </NavLink>

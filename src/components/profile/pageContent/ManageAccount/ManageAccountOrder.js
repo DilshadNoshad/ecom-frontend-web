@@ -1,12 +1,14 @@
 import React, { useContext, useEffect } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { getPrice, stringToDate } from "../../../../entities/GeneralFunc";
 import useHttp from "../../../../hooks/use-http";
 import { getUserOrderList } from "../../../../Services/order";
 import AuthContext from "../../../../Store/auth-context";
 import LoadingSpinner from "../../../UI/loadingSpinner/LoadingSpinner";
+import NoItems from "../../../UI/noItems/NoItems";
 
 const ManageAccountOrder = () => {
+  const navigate = useNavigate();
   const authCtx = useContext(AuthContext);
 
   //Destructuring UserData of useId
@@ -23,6 +25,10 @@ const ManageAccountOrder = () => {
     sendRequest(userId);
   }, [sendRequest, userId]);
 
+  const shoppingBtnHandler = () => {
+    navigate("/");
+  };
+
   if (status === "pending") {
     return (
       <div className="centered">
@@ -35,7 +41,13 @@ const ManageAccountOrder = () => {
     return <div className="centered focused">{error}</div>;
   }
   if (status === "completed" && (!orderList || orderList.length === 0)) {
-    return <p>no order found</p>;
+    return (
+      <NoItems
+        btnText="CONTINUE SHOPPING"
+        onClick={shoppingBtnHandler}
+        noItemText="There are no orders yet."
+      />
+    );
   }
 
   console.log(orderList, "-ordelist in manage order-");
